@@ -96,7 +96,7 @@ export default function StatsSection() {
                 <div className="text-[28px] sm:text-[32px] font-black text-[#F4F7F9] tracking-tight leading-none">
                   {value}
                 </div>
-                <div className="text-[#AEB7C2] text-[10px] font-bold uppercase tracking-[0.18em] mt-2 leading-snug">
+                <div className="font-mono text-[#AEB7C2] text-[10px] font-bold uppercase tracking-[0.18em] mt-2 leading-snug">
                   {label}
                 </div>
               </div>

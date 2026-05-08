@@ -1,12 +1,7 @@
 ﻿"use client";
 
-const nav = [
-  { label: "Services", href: "/services" },
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "Industries", href: "/industries" },
-  { label: "Process", href: "/process" },
-  { label: "About", href: "/about" },
-];
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const assessmentCovers = [
   {
@@ -63,29 +58,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-[#0B1220] text-[#F4F7F9]">
 
-      {/* ── Header ── */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0B1220]/95 backdrop-blur-sm border-b border-[#AEB7C2]/10">
-        <div className="max-w-6xl mx-auto px-6 h-24 flex items-center justify-between">
-          <a href="/">
-            <img src="/H4%20Systems%20Logo.png" alt="H Four Systems" className="h-20 w-auto" />
-          </a>
-          <nav className="hidden md:flex items-center gap-8">
-            {nav.map((item) => (
-              <a key={item.href} href={item.href} className="text-sm text-[#AEB7C2] hover:text-[#F4F7F9] transition-colors">
-                {item.label}
-              </a>
-            ))}
-            <a href="/contact" className="text-sm bg-[#8FBFBA] hover:bg-[#72A8A3] text-[#0B1220] font-semibold px-4 py-2 rounded-md transition-colors">
-              Schedule a Review
-            </a>
-          </nav>
-          <button className="md:hidden text-[#AEB7C2] hover:text-[#F4F7F9]" aria-label="Open menu">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-      </header>
+      <Navbar />
 
       {/* ── Hero ── */}
       <section className="pt-36 pb-16 px-6">
@@ -254,16 +227,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ── Footer ── */}
-      <footer className="py-10 px-6 border-t border-[#AEB7C2]/10">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
-          <div className="text-center md:text-left">
-            <div className="text-[#F4F7F9] font-semibold mb-1">H Four Systems</div>
-            <div className="text-[#AEB7C2] text-sm">Modern websites. Practical systems. Better business outcomes.</div>
-          </div>
-          <div className="text-[#AEB7C2]/50 text-sm">© 2026 H Four Systems. All rights reserved.</div>
-        </div>
-      </footer>
+      <Footer />
 
     </div>
   );

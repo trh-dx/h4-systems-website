@@ -152,7 +152,7 @@ function ServiceCard({
       {/* Learn more */}
       <a
         href={href}
-        className="inline-flex items-center gap-2 text-[#8FBFBA] text-[12px] font-bold tracking-[0.2em] uppercase group-hover:gap-3 transition-all duration-200"
+        className="inline-flex items-center gap-2 font-mono text-[#8FBFBA] text-[11px] font-bold tracking-[0.2em] uppercase group-hover:gap-3 transition-[gap] duration-200"
       >
         <span>Learn More</span>
         <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
@@ -179,7 +179,7 @@ export default function ServicesGrid() {
           transition={{ duration: 0.55 }}
           className="text-center mb-14"
         >
-          <p className="text-[#8FBFBA] text-[13px] font-bold tracking-[0.28em] uppercase">
+          <p className="font-mono text-[#8FBFBA] text-[11px] font-bold tracking-[0.28em] uppercase">
             Solutions That Drive Results
           </p>
         </motion.div>

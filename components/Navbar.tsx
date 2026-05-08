@@ -15,7 +15,7 @@ function H4Logo() {
   return (
     <a href="/" className="flex items-center group">
       <img
-        src="/H4%20Systems%20Logo.png"
+        src="/brand_assets/H4%20Systems%20Logo.png"
         alt="H Four Systems"
         className="h-20 w-auto object-contain"
       />
@@ -43,7 +43,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-[10px] font-bold tracking-[0.2em] text-[#AEB7C2] hover:text-[#F4F7F9] transition-colors duration-200"
+                className="font-mono text-[10px] font-bold tracking-[0.2em] text-[#AEB7C2] hover:text-[#F4F7F9] transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -53,7 +53,7 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <a
             href="/contact"
-            className="hidden lg:inline-flex items-center bg-[#8FBFBA] hover:bg-[#72A8A3] text-[#0B1220] font-bold text-[10px] tracking-[0.18em] px-6 py-3 rounded-md transition-colors duration-200"
+            className="hidden lg:inline-flex items-center font-mono bg-[#8FBFBA] hover:bg-[#72A8A3] text-[#0B1220] font-bold text-[10px] tracking-[0.18em] px-6 py-3 rounded-md transition-colors duration-200"
           >
             LET&apos;S TALK
           </a>
@@ -92,7 +92,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="py-3 text-[10px] font-bold tracking-[0.2em] text-[#AEB7C2] hover:text-[#F4F7F9] transition-colors border-b border-[#AEB7C2]/8 last:border-0"
+                  className="font-mono py-3 text-[10px] font-bold tracking-[0.2em] text-[#AEB7C2] hover:text-[#F4F7F9] transition-colors border-b border-[#AEB7C2]/8 last:border-0"
                 >
                   {link.label}
                 </a>
@@ -100,7 +100,7 @@ export default function Navbar() {
               <a
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="mt-4 inline-flex items-center justify-center bg-[#8FBFBA] hover:bg-[#72A8A3] text-[#0B1220] font-bold text-[10px] tracking-[0.18em] px-6 py-3.5 rounded-md transition-colors"
+                className="mt-4 inline-flex items-center justify-center font-mono bg-[#8FBFBA] hover:bg-[#72A8A3] text-[#0B1220] font-bold text-[10px] tracking-[0.18em] px-6 py-3.5 rounded-md transition-colors"
               >
                 LET&apos;S TALK
               </a>

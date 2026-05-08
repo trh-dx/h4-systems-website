@@ -46,7 +46,7 @@ export default function Hero() {
           {/* Eyebrow */}
           <motion.p
             variants={fadeUp}
-            className="text-[#8FBFBA] text-[10px] font-bold tracking-[0.28em] uppercase mb-8"
+            className="font-mono text-[#8FBFBA] text-[10px] font-bold tracking-[0.28em] uppercase mb-8"
           >
             Modern Solutions.&nbsp; Intelligent Systems.&nbsp; Real Results.
           </motion.p>
@@ -80,7 +80,7 @@ export default function Hero() {
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4">
             <a
               href="/contact"
-              className="group inline-flex items-center justify-center gap-3 bg-[#8FBFBA] hover:bg-[#72A8A3] text-[#0B1220] font-bold text-[10px] tracking-[0.16em] uppercase px-8 py-4 rounded-md transition-all duration-200"
+              className="group inline-flex items-center justify-center gap-3 font-mono bg-[#8FBFBA] hover:bg-[#72A8A3] text-[#0B1220] font-bold text-[10px] tracking-[0.16em] uppercase px-8 py-4 rounded-md transition-colors duration-200"
             >
               Let&apos;s Build Your System
               <span className="transition-transform duration-200 group-hover:translate-x-1">
@@ -89,7 +89,7 @@ export default function Hero() {
             </a>
             <a
               href="/services"
-              className="inline-flex items-center justify-center border border-[#AEB7C2]/25 hover:border-[#8FBFBA]/50 text-[#AEB7C2] hover:text-[#F4F7F9] font-bold text-[10px] tracking-[0.16em] uppercase px-8 py-4 rounded-md transition-all duration-200"
+              className="inline-flex items-center justify-center font-mono border border-[#AEB7C2]/25 hover:border-[#8FBFBA]/50 text-[#AEB7C2] hover:text-[#F4F7F9] font-bold text-[10px] tracking-[0.16em] uppercase px-8 py-4 rounded-md transition-colors duration-200"
             >
               View Solutions
             </a>

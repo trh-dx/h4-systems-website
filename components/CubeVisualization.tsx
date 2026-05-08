@@ -246,7 +246,7 @@ export default function CubeVisualization() {
               fontSize="14"
               fontWeight="700"
               letterSpacing="2.5"
-              fontFamily="Inter, Geist, system-ui, sans-serif"
+              fontFamily="var(--font-montserrat), system-ui, sans-serif"
             >
               {l.text}
             </text>
@@ -255,7 +255,7 @@ export default function CubeVisualization() {
               y={labelDots[i].y + 14}
               fill="#AEB7C2"
               fontSize="12"
-              fontFamily="Inter, Geist, system-ui, sans-serif"
+              fontFamily="var(--font-montserrat), system-ui, sans-serif"
             >
               {l.sub}
             </text>

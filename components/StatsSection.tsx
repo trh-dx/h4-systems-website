@@ -60,10 +60,10 @@ function SuccessIcon() {
 // ── Data ───────────────────────────────────────────────────────────
 
 const stats = [
-  { value: "10+",   label: "Industries Served",       Icon: IndustriesIcon },
-  { value: "50+",   label: "Systems Built",            Icon: SystemsIcon    },
-  { value: "1000+", label: "Automated Workflows",      Icon: WorkflowsIcon  },
-  { value: "100%",  label: "Focused on Your Success",  Icon: SuccessIcon    },
+  { value: "20+ Years",                  label: "IT & Systems Experience",    valueClass: "text-[26px] sm:text-[30px]", Icon: WorkflowsIcon  },
+  { value: "Automation & Integration",   label: "Leadership",                 valueClass: "text-[18px] sm:text-[20px]", Icon: SystemsIcon    },
+  { value: "Business Outcomes",          label: "Built Around Real Results",  valueClass: "text-[20px] sm:text-[22px]", Icon: IndustriesIcon },
+  { value: "Practical ROI",              label: "Focused on Measurable Value",valueClass: "text-[24px] sm:text-[28px]", Icon: SuccessIcon    },
 ];
 
 // ── Section ────────────────────────────────────────────────────────
@@ -79,7 +79,7 @@ export default function StatsSection() {
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {stats.map(({ value, label, Icon }, i) => (
+          {stats.map(({ value, label, valueClass, Icon }, i) => (
             <motion.div
               key={label}
               initial={{ opacity: 0, y: 20 }}
@@ -93,7 +93,7 @@ export default function StatsSection() {
               </div>
               {/* Text */}
               <div>
-                <div className="text-[28px] sm:text-[32px] font-black text-[#F4F7F9] tracking-tight leading-none">
+                <div className={`${valueClass} font-black text-[#F4F7F9] tracking-tight leading-tight`}>
                   {value}
                 </div>
                 <div className="font-mono text-[#AEB7C2] text-[10px] font-bold uppercase tracking-[0.18em] mt-2 leading-snug">

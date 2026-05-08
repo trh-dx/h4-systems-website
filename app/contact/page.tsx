@@ -1,4 +1,6 @@
-﻿const nav = [
+﻿"use client";
+
+const nav = [
   { label: "Services", href: "/services" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Industries", href: "/industries" },

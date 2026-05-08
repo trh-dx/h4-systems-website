@@ -71,9 +71,8 @@ export default function Hero() {
             variants={fadeUp}
             className="text-[#AEB7C2] text-[15px] leading-[1.75] max-w-[440px] mt-8 mb-10"
           >
-            We help businesses modernize operations through intelligent systems,
-            automation, AI, and scalable digital solutions that drive growth and
-            efficiency.
+            Modern websites, automation, dashboards, and AI tools for businesses
+            ready to operate smarter.
           </motion.p>
 
           {/* CTA buttons */}

@@ -98,10 +98,12 @@ export default function ServicesPage() {
 
       {/* ── Hero ── */}
       <section className="pt-36 pb-20 px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-4">Operational Modernization Services</div>
-          <h1 className="text-[clamp(1.5rem,3.2vw,3rem)] font-bold text-[#F4F7F9] leading-tight tracking-tight mb-6 whitespace-nowrap">
-            Modern websites. Better user experience. More customers.
+          <h1 className="text-[clamp(1.5rem,3.2vw,3rem)] font-bold text-[#F4F7F9] leading-tight tracking-tight mb-6">
+            <span className="block">Modern websites.</span>
+            <span className="block">Better user experience.</span>
+            <span className="block">More customers.</span>
           </h1>
           <p className="text-lg text-[#AEB7C2] leading-relaxed max-w-2xl">
             We deliver end-to-end modernization — from your customer-facing platform through to the internal systems that power daily operations.

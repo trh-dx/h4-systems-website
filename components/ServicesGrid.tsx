@@ -216,7 +216,7 @@ export default function ServicesGrid() {
             Modern systems for businesses that are ready to grow
           </h2>
           <p className="text-[#AEB7C2] text-[15px] leading-relaxed">
-            From outdated websites to manual workflows, H Four Systems helps businesses create cleaner, faster, more connected digital operations.
+            From outdated websites to manual workflows, H Four Systems helps businesses create cleaner, faster, more connected digital operations. We use modern AI tools to move faster — from prototype to production-ready solution in weeks, not months.
           </p>
         </motion.div>
 

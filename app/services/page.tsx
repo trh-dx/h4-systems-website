@@ -1,18 +1,52 @@
 ﻿import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+function WebsiteIcon() {
+  return (
+    <svg width="36" height="36" viewBox="0 0 44 44" fill="none" aria-hidden>
+      <rect x="4" y="8" width="36" height="26" rx="2" stroke="#8FBFBA" strokeWidth="1.4" />
+      <line x1="4" y1="15" x2="40" y2="15" stroke="#8FBFBA" strokeWidth="1.2" />
+      <circle cx="10" cy="11.5" r="1.5" fill="#8FBFBA" opacity="0.6" />
+      <circle cx="15.5" cy="11.5" r="1.5" fill="#8FBFBA" opacity="0.6" />
+      <circle cx="21" cy="11.5" r="1.5" fill="#8FBFBA" opacity="0.6" />
+      <rect x="10" y="20" width="10" height="8" rx="1" stroke="#8FBFBA" strokeWidth="1.2" />
+      <line x1="23" y1="21" x2="34" y2="21" stroke="#8FBFBA" strokeWidth="1.2" strokeLinecap="round" />
+      <line x1="23" y1="24.5" x2="34" y2="24.5" stroke="#8FBFBA" strokeWidth="1.2" strokeLinecap="round" />
+      <line x1="14" y1="38" x2="30" y2="38" stroke="#8FBFBA" strokeWidth="1.4" strokeLinecap="round" />
+      <line x1="22" y1="34" x2="22" y2="38" stroke="#8FBFBA" strokeWidth="1.4" />
+    </svg>
+  );
+}
+
+function MobileIcon() {
+  return (
+    <svg width="36" height="36" viewBox="0 0 44 44" fill="none" aria-hidden>
+      <rect x="13" y="4" width="18" height="36" rx="3" stroke="#8FBFBA" strokeWidth="1.4" />
+      <line x1="13" y1="10" x2="31" y2="10" stroke="#8FBFBA" strokeWidth="1.2" />
+      <line x1="13" y1="34" x2="31" y2="34" stroke="#8FBFBA" strokeWidth="1.2" />
+      <circle cx="22" cy="37" r="1.5" fill="#8FBFBA" opacity="0.7" />
+      <line x1="19" y1="17" x2="25" y2="17" stroke="#8FBFBA" strokeWidth="1.4" strokeLinecap="round" />
+      <line x1="17" y1="21" x2="27" y2="21" stroke="#8FBFBA" strokeWidth="1.2" strokeLinecap="round" />
+      <line x1="17" y1="25" x2="27" y2="25" stroke="#8FBFBA" strokeWidth="1.2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function DashboardIcon() {
+  return (
+    <svg width="36" height="36" viewBox="0 0 44 44" fill="none" aria-hidden>
+      <rect x="4" y="6" width="36" height="26" rx="2" stroke="#8FBFBA" strokeWidth="1.4" />
+      <line x1="4" y1="40" x2="40" y2="40" stroke="#8FBFBA" strokeWidth="1.4" />
+      <line x1="22" y1="32" x2="22" y2="40" stroke="#8FBFBA" strokeWidth="1.4" />
+      <polyline points="9,26 16,17 23,21 33,11" fill="none" stroke="#8FBFBA" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="33" cy="11" r="2.5" fill="#8FBFBA" opacity="0.75" />
+    </svg>
+  );
+}
+
 const pillars = [
   {
-    glyph: null,
-    icon: (
-      <svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden>
-        <rect x="14" y="4" width="20" height="34" rx="3" stroke="#8FBFBA" strokeWidth="1.6" />
-        <rect x="18" y="8" width="12" height="20" rx="1" stroke="#8FBFBA" strokeWidth="1.2" strokeOpacity="0.6" />
-        <circle cx="24" cy="33" r="2" fill="#8FBFBA" opacity="0.8" />
-        <line x1="6" y1="20" x2="12" y2="20" stroke="#8FBFBA" strokeWidth="1.2" strokeOpacity="0.45" strokeLinecap="round" />
-        <line x1="36" y1="20" x2="42" y2="20" stroke="#8FBFBA" strokeWidth="1.2" strokeOpacity="0.45" strokeLinecap="round" />
-      </svg>
-    ),
+    icon: <MobileIcon />,
     title: "Mobile-Friendly Website Design",
     description: "Make your website look great and work smoothly across phones, tablets, and desktops — so customers can easily browse, call, and request service from anywhere.",
     capabilities: [
@@ -26,8 +60,7 @@ const pillars = [
     cta: { label: "Make My Site Mobile-Friendly", href: "/contact" },
   },
   {
-    glyph: "◈",
-    icon: null,
+    icon: <WebsiteIcon />,
     title: "Website Transformation",
     description: null,
     capabilities: [
@@ -41,8 +74,7 @@ const pillars = [
     cta: { label: "Transform My Website", href: "/contact" },
   },
   {
-    glyph: "▦",
-    icon: null,
+    icon: <DashboardIcon />,
     title: "Performance Dashboards",
     description: null,
     capabilities: [
@@ -106,7 +138,7 @@ export default function ServicesPage() {
             <span className="block">More customers.</span>
           </h1>
           <p className="text-lg text-[#AEB7C2] leading-relaxed max-w-2xl">
-            We deliver end-to-end transformation — from your customer-facing platform through to the internal systems that power daily operations.
+            From modern websites to the internal systems that power daily operations, we deliver AI-powered digital solutions that help you operate smarter, move faster, and compete stronger.
           </p>
         </div>
       </section>
@@ -116,12 +148,9 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {pillars.map((p) => (
-              <div key={p.title} className="bg-[#1A2333] border border-[#AEB7C2]/15 rounded-xl p-8 flex flex-col hover:border-[#8FBFBA]/30 transition-colors">
-                <div className="mb-5">
-                  {p.icon
-                    ? <div className="text-[#8FBFBA]">{p.icon}</div>
-                    : <div className="text-[#8FBFBA] text-2xl font-mono">{p.glyph}</div>
-                  }
+              <div key={p.title} className="bg-[#1A2333] border border-[#AEB7C2]/15 rounded-xl p-8 flex flex-col hover:border-[#8FBFBA]/60 hover:shadow-[0_8px_32px_rgba(111,175,166,0.15)] hover:-translate-y-1 transition-all duration-300">
+                <div className="mb-5 p-2.5 inline-flex rounded-lg bg-[#0B1220] w-fit">
+                  {p.icon}
                 </div>
                 <h3 className="text-[#F4F7F9] font-semibold text-xl mb-4">{p.title}</h3>
                 {p.description && (

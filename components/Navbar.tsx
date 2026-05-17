@@ -53,7 +53,7 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <a
             href="/contact"
-            className="hidden lg:inline-flex items-center font-mono bg-[#8FBFBA] hover:bg-[#72A8A3] text-[#0B1220] font-bold text-[10px] tracking-[0.18em] px-6 py-3 rounded-md transition-colors duration-200"
+            className="hidden lg:inline-flex items-center font-mono bg-[#8FBFBA] hover:bg-[#A8D4CF] text-[#0B1220] font-bold text-[10px] tracking-[0.18em] px-6 py-3 rounded-md transition-colors duration-200"
           >
             LET&apos;S TALK
           </a>
@@ -100,7 +100,7 @@ export default function Navbar() {
               <a
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="mt-4 inline-flex items-center justify-center font-mono bg-[#8FBFBA] hover:bg-[#72A8A3] text-[#0B1220] font-bold text-[10px] tracking-[0.18em] px-6 py-3.5 rounded-md transition-colors"
+                className="mt-4 inline-flex items-center justify-center font-mono bg-[#8FBFBA] hover:bg-[#A8D4CF] text-[#0B1220] font-bold text-[10px] tracking-[0.18em] px-6 py-3.5 rounded-md transition-colors"
               >
                 LET&apos;S TALK
               </a>

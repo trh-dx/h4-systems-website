@@ -84,7 +84,7 @@ interface Service {
 
 const services: Service[] = [
   {
-    title: "Website & Platform Modernization",
+    title: "Website Transformation",
     desc: "Replace an outdated website with a modern, fast, lead-focused digital experience.",
     bullets: [
       "Modern website redesign",
@@ -93,7 +93,7 @@ const services: Service[] = [
       "Contact and quote request forms",
       "Fast hosting and deployment",
     ],
-    cta: "Modernize My Website",
+    cta: "Transform My Website",
     Icon: WebsiteIcon,
     href: "/contact",
   },

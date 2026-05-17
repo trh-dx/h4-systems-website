@@ -63,7 +63,7 @@ export default function AboutPage() {
             We modernize how businesses operate.
           </h1>
           <p className="text-lg text-[#AEB7C2] leading-relaxed max-w-2xl">
-            H Four Systems is a business modernization and operational systems firm. We help small and mid-sized businesses move from legacy processes and disconnected tools to integrated, automated, and visible operations.
+            H Four Systems is a business modernization and operational systems company. We help small and mid-sized businesses move from legacy processes and disconnected tools to integrated, automated, and visible operations.
           </p>
         </div>
       </section>

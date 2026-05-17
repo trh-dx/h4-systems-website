@@ -28,7 +28,7 @@ const pillars = [
   {
     glyph: "◈",
     icon: null,
-    title: "Website & Platform Modernization",
+    title: "Website Transformation",
     description: null,
     capabilities: [
       "Legacy website rebuild and redesign",
@@ -38,12 +38,12 @@ const pillars = [
       "Brand-aligned visual systems",
     ],
     stat: "A modernized website built to convert more visitors into calls, quote requests, and qualified leads.",
-    cta: { label: "Modernize My Website", href: "/contact" },
+    cta: { label: "Transform My Website", href: "/contact" },
   },
   {
     glyph: "▦",
     icon: null,
-    title: "Operational Visibility",
+    title: "Performance Dashboards",
     description: null,
     capabilities: [
       "Executive dashboard design and build",
@@ -99,14 +99,14 @@ export default function ServicesPage() {
       {/* ── Hero ── */}
       <section className="pt-36 pb-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-4">Operational Modernization Services</div>
+          <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-4">Business Transformation Services</div>
           <h1 className="text-[clamp(1.5rem,3.2vw,3rem)] font-bold text-[#F4F7F9] leading-tight tracking-tight mb-6">
             <span className="block">Modern websites.</span>
             <span className="block">Better user experience.</span>
             <span className="block">More customers.</span>
           </h1>
           <p className="text-lg text-[#AEB7C2] leading-relaxed max-w-2xl">
-            We deliver end-to-end modernization — from your customer-facing platform through to the internal systems that power daily operations.
+            We deliver end-to-end transformation — from your customer-facing platform through to the internal systems that power daily operations.
           </p>
         </div>
       </section>
@@ -161,7 +161,7 @@ export default function ServicesPage() {
       <section className="py-24 px-6 bg-[#1A2333]">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12">
-            <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-3">Operational Visibility</div>
+            <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-3">Performance Dashboards</div>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#F4F7F9] mb-3">Executive dashboard, built for your business.</h2>
             <p className="text-[#AEB7C2] max-w-xl">Real-time operational intelligence — not a generic BI tool. Custom-built to surface what matters for your specific operation.</p>
           </div>

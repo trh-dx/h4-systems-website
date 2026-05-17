@@ -69,9 +69,10 @@ export default function Hero() {
           {/* Body copy */}
           <motion.p
             variants={fadeUp}
-            className="text-[#AEB7C2] text-[15px] leading-[1.75] max-w-[440px] mt-8 mb-10"
+            className="text-[#AEB7C2] text-[15px] leading-[1.75] max-w-[520px] mt-8 mb-10"
           >
             Business-first digital solutions powered by modern technology.
+            <br />
             Websites, dashboards, automation, and AI tools built to help your
             business operate smarter.
           </motion.p>
@@ -82,7 +83,7 @@ export default function Hero() {
               href="/contact"
               className="group inline-flex items-center justify-center gap-3 font-mono bg-[#8FBFBA] hover:bg-[#72A8A3] text-[#0B1220] font-bold text-[10px] tracking-[0.16em] uppercase px-8 py-4 rounded-md transition-colors duration-200"
             >
-              Let&apos;s Build Your System
+              Let&apos;s Transform
               <span className="transition-transform duration-200 group-hover:translate-x-1">
                 →
               </span>
@@ -91,7 +92,7 @@ export default function Hero() {
               href="/services"
               className="inline-flex items-center justify-center font-mono border border-[#AEB7C2]/25 hover:border-[#8FBFBA]/50 text-[#AEB7C2] hover:text-[#F4F7F9] font-bold text-[10px] tracking-[0.16em] uppercase px-8 py-4 rounded-md transition-colors duration-200"
             >
-              View Solutions
+              Explore Services
             </a>
           </motion.div>
         </motion.div>

@@ -71,8 +71,9 @@ export default function Hero() {
             variants={fadeUp}
             className="text-[#AEB7C2] text-[15px] leading-[1.75] max-w-[440px] mt-8 mb-10"
           >
-            Modern websites, automation, dashboards, and AI tools for businesses
-            ready to operate smarter.
+            Business-first digital solutions powered by modern technology.
+            Websites, dashboards, automation, and AI tools built to help your
+            business operate smarter.
           </motion.p>
 
           {/* CTA buttons */}

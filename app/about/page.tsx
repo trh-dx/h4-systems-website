@@ -1,4 +1,4 @@
-﻿import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const trustMetrics = [
@@ -58,7 +58,7 @@ export default function AboutPage() {
       {/* ── Hero ── */}
       <section className="pt-36 pb-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-4">About H Four Systems</div>
+          <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">About H Four Systems</div>
           <h1 className="text-4xl sm:text-5xl font-bold text-[#F4F7F9] leading-tight tracking-tight mb-6">
             We modernize how businesses operate.
           </h1>
@@ -80,8 +80,8 @@ export default function AboutPage() {
               <ul className="space-y-4">
                 {positioningPoints.map((pt) => (
                   <li key={pt} className="flex items-start gap-3 text-sm text-[#AEB7C2] leading-relaxed">
-                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#8FBFBA]/15 border border-[#8FBFBA]/30 flex items-center justify-center mt-0.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#8FBFBA]" />
+                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#6FAFA6]/15 border border-[#6FAFA6]/30 flex items-center justify-center mt-0.5">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#6FAFA6]" />
                     </div>
                     {pt}
                   </li>
@@ -99,7 +99,7 @@ export default function AboutPage() {
                   { area: "Scalable Infrastructure", detail: "Growth-blocking systems → scalable digital foundations" },
                 ].map((f) => (
                   <div key={f.area} className="flex gap-4 py-4 border-b border-[#AEB7C2]/10 last:border-0">
-                    <div className="flex-shrink-0 w-0.5 bg-[#8FBFBA] rounded-full self-stretch" />
+                    <div className="flex-shrink-0 w-0.5 bg-[#6FAFA6] rounded-full self-stretch" />
                     <div>
                       <div className="text-[#F4F7F9] font-semibold text-sm mb-0.5">{f.area}</div>
                       <div className="text-[#AEB7C2] text-xs">{f.detail}</div>
@@ -115,11 +115,11 @@ export default function AboutPage() {
       {/* ── Trust Metrics ── */}
       <section className="py-24 px-6 bg-[#1A2333]">
         <div className="max-w-6xl mx-auto">
-          <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-8 text-center">By the Numbers</div>
+          <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-8 text-center">By the Numbers</div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {trustMetrics.map((m) => (
               <div key={m.label} className="bg-[#0B1220] border border-[#AEB7C2]/15 rounded-xl p-8 text-center">
-                <div className="text-4xl sm:text-5xl font-bold text-[#8FBFBA] mb-2 tracking-tight">{m.stat}</div>
+                <div className="text-4xl sm:text-5xl font-bold text-[#6FAFA6] mb-2 tracking-tight">{m.stat}</div>
                 <div className="text-[#F4F7F9] font-semibold text-sm mb-1">{m.label}</div>
                 <div className="text-[#AEB7C2] text-xs">{m.sub}</div>
               </div>
@@ -135,14 +135,14 @@ export default function AboutPage() {
       <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12">
-            <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-3">How We Work</div>
+            <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-3">How We Work</div>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#F4F7F9] mb-3">Methodology built on operational reality.</h2>
             <p className="text-[#AEB7C2] max-w-xl">Our approach is shaped by working directly with business owners and operators — people who need results, not reports.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {methodology.map((m) => (
               <div key={m.title} className="bg-[#1A2333] border border-[#AEB7C2]/15 rounded-xl p-7">
-                <div className="w-8 h-0.5 bg-[#8FBFBA] mb-4 rounded-full" />
+                <div className="w-8 h-0.5 bg-[#6FAFA6] mb-4 rounded-full" />
                 <h3 className="text-[#F4F7F9] font-semibold mb-3">{m.title}</h3>
                 <p className="text-[#AEB7C2] text-sm leading-relaxed">{m.desc}</p>
               </div>
@@ -155,13 +155,13 @@ export default function AboutPage() {
       <section className="py-24 px-6 bg-[#1A2333]">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12">
-            <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-3">What We Stand For</div>
+            <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-3">What We Stand For</div>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#F4F7F9]">The values that shape every engagement.</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {values.map((v) => (
-              <div key={v.name} className="bg-[#0B1220] border border-[#AEB7C2]/15 rounded-xl p-8 hover:border-[#8FBFBA]/30 transition-colors">
-                <div className="text-[#8FBFBA] text-2xl font-mono mb-5">◈</div>
+              <div key={v.name} className="bg-[#0B1220] border border-[#AEB7C2]/15 rounded-xl p-8 hover:border-[#6FAFA6]/30 transition-colors">
+                <div className="text-[#6FAFA6] text-2xl font-mono mb-5">◈</div>
                 <h3 className="text-[#F4F7F9] font-semibold text-lg mb-3">{v.name}</h3>
                 <p className="text-[#AEB7C2] text-sm leading-relaxed">{v.desc}</p>
               </div>
@@ -173,7 +173,7 @@ export default function AboutPage() {
       {/* ── Assessment CTA ── */}
       <section className="py-24 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-4">Work With Us</div>
+          <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">Work With Us</div>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#F4F7F9] mb-5">
             Let's assess your modernization opportunity.
           </h2>
@@ -181,10 +181,10 @@ export default function AboutPage() {
             Every engagement starts with a free assessment. No obligation, no sales pitch — just a structured conversation about where your operations are today and where they could be.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="inline-block bg-[#8FBFBA] hover:bg-[#72A8A3] text-[#0B1220] font-semibold px-8 py-4 rounded-lg transition-colors">
+            <a href="/contact" className="inline-block bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-semibold px-8 py-4 rounded-lg transition-colors">
               Schedule a Free Assessment
             </a>
-            <a href="/process" className="inline-block border border-[#8FBFBA] hover:bg-[#8FBFBA]/10 text-[#8FBFBA] font-semibold px-8 py-4 rounded-lg transition-colors">
+            <a href="/process" className="inline-block border border-[#6FAFA6] hover:bg-[#6FAFA6]/10 text-[#6FAFA6] font-semibold px-8 py-4 rounded-lg transition-colors">
               View Our Process
             </a>
           </div>

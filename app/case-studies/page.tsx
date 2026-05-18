@@ -1,4 +1,4 @@
-﻿import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const featured = {
@@ -73,7 +73,7 @@ export default function CaseStudiesPage() {
       {/* ── Hero ── */}
       <section className="pt-36 pb-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-4">Transformation Case Studies</div>
+          <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">Transformation Case Studies</div>
           <h1 className="text-4xl sm:text-5xl font-bold text-[#F4F7F9] leading-tight tracking-tight mb-6">
             Operational modernization<br className="hidden sm:block" /> in practice.
           </h1>
@@ -91,7 +91,7 @@ export default function CaseStudiesPage() {
             {/* Header bar */}
             <div className="bg-[#1A2333] px-8 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#AEB7C2]/15">
               <div className="flex items-center gap-4">
-                <span className="text-xs font-semibold tracking-widest uppercase text-[#8FBFBA] bg-[#8FBFBA]/10 border border-[#8FBFBA]/20 px-3 py-1 rounded-full">
+                <span className="text-xs font-semibold tracking-widest uppercase text-[#6FAFA6] bg-[#6FAFA6]/10 border border-[#6FAFA6]/20 px-3 py-1 rounded-full">
                   Featured Engagement
                 </span>
                 <span className="text-xs text-[#AEB7C2]">{featured.industry}</span>
@@ -105,7 +105,7 @@ export default function CaseStudiesPage() {
                 {/* Left: narrative */}
                 <div>
                   <h2 className="text-2xl sm:text-3xl font-bold text-[#F4F7F9] mb-2">{featured.client}</h2>
-                  <div className="w-10 h-0.5 bg-[#8FBFBA] mb-6 rounded-full" />
+                  <div className="w-10 h-0.5 bg-[#6FAFA6] mb-6 rounded-full" />
                   <h3 className="text-xs font-semibold tracking-widest uppercase text-[#AEB7C2] mb-3">Challenge</h3>
                   <p className="text-[#AEB7C2] text-sm leading-relaxed mb-8">{featured.challenge}</p>
 
@@ -113,8 +113,8 @@ export default function CaseStudiesPage() {
                   <div className="space-y-4">
                     {featured.phases.map((phase, i) => (
                       <div key={phase.name} className="flex gap-4">
-                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#8FBFBA]/15 border border-[#8FBFBA]/30 flex items-center justify-center mt-0.5">
-                          <span className="text-[#8FBFBA] text-xs font-bold">{i + 1}</span>
+                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#6FAFA6]/15 border border-[#6FAFA6]/30 flex items-center justify-center mt-0.5">
+                          <span className="text-[#6FAFA6] text-xs font-bold">{i + 1}</span>
                         </div>
                         <div>
                           <div className="text-[#F4F7F9] text-sm font-semibold mb-0.5">{phase.name}</div>
@@ -132,7 +132,7 @@ export default function CaseStudiesPage() {
                     <div className="space-y-5">
                       {featured.outcomes.map((o) => (
                         <div key={o.label} className="bg-[#1A2333] border border-[#AEB7C2]/15 rounded-xl p-6">
-                          <div className="text-4xl font-bold text-[#8FBFBA] mb-1 tracking-tight">{o.stat}</div>
+                          <div className="text-4xl font-bold text-[#6FAFA6] mb-1 tracking-tight">{o.stat}</div>
                           <div className="text-[#AEB7C2] text-sm">{o.label}</div>
                         </div>
                       ))}
@@ -157,9 +157,9 @@ export default function CaseStudiesPage() {
           <p className="text-[#AEB7C2] mb-12 max-w-xl">Across industries, the pattern is the same — operational complexity slowing growth, and a clear path forward.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {caseStudies.map((cs) => (
-              <div key={cs.client} className="bg-[#0B1220] border border-[#AEB7C2]/15 rounded-xl p-7 hover:border-[#8FBFBA]/30 transition-colors">
+              <div key={cs.client} className="bg-[#0B1220] border border-[#AEB7C2]/15 rounded-xl p-7 hover:border-[#6FAFA6]/30 transition-colors">
                 <div className="flex items-start justify-between mb-5">
-                  <span className="text-xs font-semibold tracking-widest uppercase text-[#8FBFBA] bg-[#8FBFBA]/10 border border-[#8FBFBA]/20 px-2.5 py-1 rounded-full">
+                  <span className="text-xs font-semibold tracking-widest uppercase text-[#6FAFA6] bg-[#6FAFA6]/10 border border-[#6FAFA6]/20 px-2.5 py-1 rounded-full">
                     {cs.tag}
                   </span>
                 </div>
@@ -167,9 +167,9 @@ export default function CaseStudiesPage() {
                 <div className="text-xs text-[#AEB7C2]/60 mb-4">{cs.industry}</div>
                 <div className="w-6 h-px bg-[#AEB7C2]/20 mb-4" />
                 <p className="text-[#AEB7C2] text-sm leading-relaxed mb-6">{cs.challenge}</p>
-                <div className="bg-[#1A2333] border border-[#8FBFBA]/20 rounded-lg px-4 py-3">
+                <div className="bg-[#1A2333] border border-[#6FAFA6]/20 rounded-lg px-4 py-3">
                   <div className="text-xs text-[#AEB7C2]/60 mb-0.5 uppercase tracking-wider font-medium">Primary Outcome</div>
-                  <div className="text-[#8FBFBA] font-semibold text-sm">{cs.outcome}</div>
+                  <div className="text-[#6FAFA6] font-semibold text-sm">{cs.outcome}</div>
                 </div>
               </div>
             ))}
@@ -204,18 +204,18 @@ export default function CaseStudiesPage() {
                   </div>
                   {/* Arrow */}
                   <div className="hidden md:flex items-center justify-center bg-[#0B1220] border-l border-r border-[#AEB7C2]/10">
-                    <svg className="w-5 h-5 text-[#8FBFBA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#6FAFA6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
                   </div>
                   {/* After */}
                   <div className="bg-[#0B1220] p-7 border-t md:border-t-0 border-[#AEB7C2]/10">
-                    <div className="text-xs font-semibold tracking-widest uppercase text-[#8FBFBA] mb-3">After</div>
+                    <div className="text-xs font-semibold tracking-widest uppercase text-[#6FAFA6] mb-3">After</div>
                     <div className="text-[#F4F7F9] font-semibold mb-4">{ba.after.state}</div>
                     <ul className="space-y-2">
                       {ba.after.indicators.map((ind) => (
                         <li key={ind} className="flex items-center gap-2.5 text-sm text-[#AEB7C2]">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#8FBFBA] flex-shrink-0" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#6FAFA6] flex-shrink-0" />
                           {ind}
                         </li>
                       ))}
@@ -231,7 +231,7 @@ export default function CaseStudiesPage() {
       {/* ── Assessment CTA ── */}
       <section className="py-24 px-6 bg-[#1A2333]">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-4">Start Your Transformation</div>
+          <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">Start Your Transformation</div>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#F4F7F9] mb-5">
             Ready to assess your operational modernization opportunity?
           </h2>
@@ -239,10 +239,10 @@ export default function CaseStudiesPage() {
             Every engagement begins with a structured assessment — mapping your current state, identifying improvement opportunities, and defining a practical path forward.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="inline-block bg-[#8FBFBA] hover:bg-[#72A8A3] text-[#0B1220] font-semibold px-8 py-4 rounded-lg transition-colors">
+            <a href="/contact" className="inline-block bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-semibold px-8 py-4 rounded-lg transition-colors">
               Schedule a Free Assessment
             </a>
-            <a href="/process" className="inline-block border border-[#8FBFBA] hover:bg-[#8FBFBA]/10 text-[#8FBFBA] font-semibold px-8 py-4 rounded-lg transition-colors">
+            <a href="/process" className="inline-block border border-[#6FAFA6] hover:bg-[#6FAFA6]/10 text-[#6FAFA6] font-semibold px-8 py-4 rounded-lg transition-colors">
               View Our Process
             </a>
           </div>

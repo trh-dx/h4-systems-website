@@ -1,8 +1,8 @@
 # H Four Systems — Website
 
-Marketing and lead-generation website for H Four Systems, a small business technology consultancy specializing in website modernization, mobile-friendly design, and operational visibility.
+Marketing and lead-generation website for H Four Systems, a small business technology consultancy specializing in website modernization, business automation, dashboards, and mobile-friendly design.
 
-Built with Next.js (App Router), Tailwind CSS, and Framer Motion.
+Built with Next.js (App Router), Tailwind CSS v4, and Framer Motion.
 
 ---
 
@@ -11,7 +11,7 @@ Built with Next.js (App Router), Tailwind CSS, and Framer Motion.
 | Route | Description |
 |---|---|
 | `/` | Homepage — hero, 4-card services grid, stats |
-| `/services` | 3 service cards (Mobile-Friendly Design, Website Modernization, Operational Visibility) each with bullets, typical result, and CTA |
+| `/services` | Service cards with bullets, typical results, and CTAs |
 | `/case-studies` | Featured and grid case studies |
 | `/industries` | 6 industry cards |
 | `/process` | 4-phase methodology |
@@ -22,18 +22,29 @@ Built with Next.js (App Router), Tailwind CSS, and Framer Motion.
 
 ## Brand
 
-**Logo:** `public/H4 Systems Logo.png` — displayed at `h-20` inside a `h-24` navbar, consistent across all pages. src is URL-encoded as `/H4%20Systems%20Logo.png`.
+**Logo:** `public/brand_assets/H4 Systems Logo.png` — displayed at `h-20` inside a `h-24` navbar. src is URL-encoded as `/brand_assets/H4%20Systems%20Logo.png`.
 
 **Colors**
 
 | Role | Hex |
 |---|---|
 | Primary Navy | `#0B1220` |
-| Secondary Slate | `#1A2333` |
-| Accent Teal | `#8FBFBA` |
-| Teal Hover | `#72A8A3` |
+| Secondary Charcoal | `#1A2333` |
+| Accent Teal | `#6FAFA6` |
+| Teal Hover | `#83BDB5` |
 | Supporting Gray | `#AEB7C2` |
-| White | `#F4F7F9` |
+| Off-White | `#F4F7F9` |
+
+**Typography**
+
+| Role | Font | Size |
+|---|---|---|
+| Headings / Body | Montserrat (weights: 400, 700, 900) | varies |
+| Nav links / Buttons / Eyebrows / Labels | Roboto Mono | `13px` |
+
+**Font size conventions**
+- Navbar links, CTA buttons, and eyebrow labels: `text-[13px]`
+- Do not use `transition-all` — use specific properties (`transition-colors`, `transition-[border-color,box-shadow,transform]`, etc.)
 
 ---
 
@@ -46,6 +57,7 @@ Built with Next.js (App Router), Tailwind CSS, and Framer Motion.
 | `components/CubeVisualization.tsx` | Animated isometric cube SVG with network labels |
 | `components/ServicesGrid.tsx` | 4-card services section on homepage |
 | `components/StatsSection.tsx` | Trust metrics / stats bar |
+| `components/Footer.tsx` | Site footer |
 
 ---
 
@@ -69,3 +81,4 @@ npm run lint    # ESLint
 - [Next.js](https://nextjs.org) — App Router
 - [Tailwind CSS](https://tailwindcss.com) — v4
 - [Framer Motion](https://www.framer.com/motion/) — animations
+- [Montserrat + Roboto Mono](https://fonts.google.com) — via next/font/google

@@ -1,4 +1,4 @@
-﻿import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const phases = [
@@ -76,15 +76,15 @@ const maturityLevels = [
     level: "Transitional",
     label: "During",
     traits: ["Systems mapped", "Architecture defined", "Automation staged", "Dashboards building"],
-    color: "border-[#8FBFBA]/20 bg-[#0B1220]",
-    labelColor: "text-[#8FBFBA]/70",
+    color: "border-[#6FAFA6]/20 bg-[#0B1220]",
+    labelColor: "text-[#6FAFA6]/70",
   },
   {
     level: "Modern",
     label: "After",
     traits: ["Integrated systems", "Automated workflows", "Real-time visibility", "Proactive operations"],
-    color: "border-[#8FBFBA]/40 bg-[#8FBFBA]/5",
-    labelColor: "text-[#8FBFBA]",
+    color: "border-[#6FAFA6]/40 bg-[#6FAFA6]/5",
+    labelColor: "text-[#6FAFA6]",
   },
 ];
 
@@ -116,7 +116,7 @@ export default function ProcessPage() {
       {/* ── Hero ── */}
       <section className="pt-36 pb-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-4">Implementation Methodology</div>
+          <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">Implementation Methodology</div>
           <h1 className="text-4xl sm:text-5xl font-bold text-[#F4F7F9] leading-tight tracking-tight mb-6">
             A structured path from<br className="hidden sm:block" /> current state to modern operations.
           </h1>
@@ -134,13 +134,13 @@ export default function ProcessPage() {
               <div key={phase.num} className="flex items-center flex-1">
                 <div className="flex flex-col items-center flex-1">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 rounded-full bg-[#8FBFBA]/15 border border-[#8FBFBA]/40 flex items-center justify-center">
-                      <span className="text-[#8FBFBA] text-xs font-bold">{i + 1}</span>
+                    <div className="w-8 h-8 rounded-full bg-[#6FAFA6]/15 border border-[#6FAFA6]/40 flex items-center justify-center">
+                      <span className="text-[#6FAFA6] text-xs font-bold">{i + 1}</span>
                     </div>
                     <span className="text-[#F4F7F9] font-semibold text-sm">{phase.name}</span>
                   </div>
-                  <div className="w-full h-0.5 bg-[#8FBFBA]/20 relative">
-                    <div className="absolute inset-y-0 left-0 w-full bg-[#8FBFBA]/40 rounded-full" />
+                  <div className="w-full h-0.5 bg-[#6FAFA6]/20 relative">
+                    <div className="absolute inset-y-0 left-0 w-full bg-[#6FAFA6]/40 rounded-full" />
                   </div>
                 </div>
                 {i < phases.length - 1 && (
@@ -162,7 +162,7 @@ export default function ProcessPage() {
               {/* Phase header */}
               <div className="bg-[#0B1220] border-b border-[#AEB7C2]/10 px-8 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex items-center gap-5">
-                  <span className="text-[#8FBFBA] text-3xl font-bold font-mono tracking-tight">{phase.num}</span>
+                  <span className="text-[#6FAFA6] text-3xl font-bold font-mono tracking-tight">{phase.num}</span>
                   <div>
                     <div className="text-[#F4F7F9] font-bold text-xl">{phase.name}</div>
                     <div className="text-[#AEB7C2] text-sm">{phase.tagline}</div>
@@ -179,9 +179,9 @@ export default function ProcessPage() {
               <div className="p-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                   <p className="text-[#AEB7C2] text-sm leading-relaxed mb-6">{phase.desc}</p>
-                  <div className="bg-[#0B1220] border border-[#8FBFBA]/20 rounded-lg px-5 py-4">
+                  <div className="bg-[#0B1220] border border-[#6FAFA6]/20 rounded-lg px-5 py-4">
                     <div className="text-xs text-[#AEB7C2]/50 uppercase tracking-wider mb-1">Primary Deliverable</div>
-                    <div className="text-[#8FBFBA] font-semibold text-sm">{phase.deliverable}</div>
+                    <div className="text-[#6FAFA6] font-semibold text-sm">{phase.deliverable}</div>
                   </div>
                 </div>
                 <div>
@@ -189,8 +189,8 @@ export default function ProcessPage() {
                   <ul className="space-y-3">
                     {phase.activities.map((act) => (
                       <li key={act} className="flex items-start gap-3 text-sm text-[#AEB7C2]">
-                        <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#8FBFBA]/15 border border-[#8FBFBA]/30 flex items-center justify-center mt-0.5">
-                          <div className="w-1.5 h-1.5 rounded-full bg-[#8FBFBA]" />
+                        <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#6FAFA6]/15 border border-[#6FAFA6]/30 flex items-center justify-center mt-0.5">
+                          <div className="w-1.5 h-1.5 rounded-full bg-[#6FAFA6]" />
                         </div>
                         {act}
                       </li>
@@ -207,7 +207,7 @@ export default function ProcessPage() {
       <section className="py-24 px-6 bg-[#1A2333]">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12">
-            <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-3">Operational Maturity</div>
+            <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-3">Operational Maturity</div>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#F4F7F9] mb-3">Where you are. Where you're going.</h2>
             <p className="text-[#AEB7C2] max-w-xl">The modernization journey has three clear states. Most businesses we work with start in Legacy and reach Modern within one engagement cycle.</p>
           </div>
@@ -219,7 +219,7 @@ export default function ProcessPage() {
                 <ul className="space-y-3">
                   {m.traits.map((t) => (
                     <li key={t} className="flex items-center gap-2.5 text-sm text-[#AEB7C2]">
-                      <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${m.label === "After" ? "bg-[#8FBFBA]" : "bg-[#AEB7C2]/30"}`} />
+                      <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${m.label === "After" ? "bg-[#6FAFA6]" : "bg-[#AEB7C2]/30"}`} />
                       {t}
                     </li>
                   ))}
@@ -234,13 +234,13 @@ export default function ProcessPage() {
       <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12">
-            <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-3">Guiding Principles</div>
+            <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-3">Guiding Principles</div>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#F4F7F9]">How we approach every engagement.</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {principles.map((p) => (
               <div key={p.title} className="bg-[#1A2333] border border-[#AEB7C2]/15 rounded-xl p-6">
-                <div className="w-8 h-0.5 bg-[#8FBFBA] mb-4 rounded-full" />
+                <div className="w-8 h-0.5 bg-[#6FAFA6] mb-4 rounded-full" />
                 <h3 className="text-[#F4F7F9] font-semibold mb-3">{p.title}</h3>
                 <p className="text-[#AEB7C2] text-sm leading-relaxed">{p.desc}</p>
               </div>
@@ -252,7 +252,7 @@ export default function ProcessPage() {
       {/* ── Assessment CTA ── */}
       <section className="py-24 px-6 bg-[#1A2333]">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-4">Start the Process</div>
+          <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">Start the Process</div>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#F4F7F9] mb-5">
             Ready to begin your modernization assessment?
           </h2>
@@ -260,10 +260,10 @@ export default function ProcessPage() {
             The first step is a structured discovery conversation — no commitment required. We'll map your current state and identify where the highest-leverage opportunities are.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="inline-block bg-[#8FBFBA] hover:bg-[#72A8A3] text-[#0B1220] font-semibold px-8 py-4 rounded-lg transition-colors">
+            <a href="/contact" className="inline-block bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-semibold px-8 py-4 rounded-lg transition-colors">
               Schedule a Free Assessment
             </a>
-            <a href="/services" className="inline-block border border-[#8FBFBA] hover:bg-[#8FBFBA]/10 text-[#8FBFBA] font-semibold px-8 py-4 rounded-lg transition-colors">
+            <a href="/services" className="inline-block border border-[#6FAFA6] hover:bg-[#6FAFA6]/10 text-[#6FAFA6] font-semibold px-8 py-4 rounded-lg transition-colors">
               View Our Services
             </a>
           </div>

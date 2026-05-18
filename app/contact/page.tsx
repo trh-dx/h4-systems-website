@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -63,7 +63,7 @@ export default function ContactPage() {
       {/* ── Hero ── */}
       <section className="pt-36 pb-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-4">Business Modernization Assessment</div>
+          <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">Business Modernization Assessment</div>
           <h1 className="text-4xl sm:text-5xl font-bold text-[#F4F7F9] leading-tight tracking-tight mb-6">
             Understand your modernization opportunity. At no cost.
           </h1>
@@ -86,8 +86,8 @@ export default function ContactPage() {
                 <div className="space-y-5">
                   {assessmentCovers.map((item, i) => (
                     <div key={item.title} className="flex gap-4">
-                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#8FBFBA]/15 border border-[#8FBFBA]/30 flex items-center justify-center mt-0.5">
-                        <span className="text-[#8FBFBA] text-xs font-bold">{i + 1}</span>
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#6FAFA6]/15 border border-[#6FAFA6]/30 flex items-center justify-center mt-0.5">
+                        <span className="text-[#6FAFA6] text-xs font-bold">{i + 1}</span>
                       </div>
                       <div>
                         <div className="text-[#F4F7F9] font-semibold text-sm mb-1">{item.title}</div>
@@ -99,17 +99,17 @@ export default function ContactPage() {
               </div>
 
               {/* What you receive */}
-              <div className="bg-[#0B1220] border border-[#8FBFBA]/20 rounded-xl p-8">
-                <div className="text-xs font-semibold tracking-widest uppercase text-[#8FBFBA] mb-5">What You Receive</div>
+              <div className="bg-[#0B1220] border border-[#6FAFA6]/20 rounded-xl p-8">
+                <div className="text-xs font-semibold tracking-widest uppercase text-[#6FAFA6] mb-5">What You Receive</div>
                 <ul className="space-y-3">
                   {whatYouGet.map((item) => (
                     <li key={item} className="flex items-center gap-3 text-sm text-[#AEB7C2]">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#8FBFBA] flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#6FAFA6] flex-shrink-0" />
                       {item}
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 pt-5 border-t border-[#8FBFBA]/15">
+                <div className="mt-6 pt-5 border-t border-[#6FAFA6]/15">
                   <div className="text-xs text-[#AEB7C2]/50 uppercase tracking-wider mb-0.5">Format</div>
                   <div className="text-[#F4F7F9] text-sm font-medium">Video call — 60 to 90 minutes</div>
                 </div>
@@ -130,7 +130,7 @@ export default function ContactPage() {
                     <input
                       type="text"
                       placeholder="Jane"
-                      className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#8FBFBA]/60 transition-colors"
+                      className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#6FAFA6]/60 transition-colors"
                     />
                   </div>
                   <div>
@@ -140,7 +140,7 @@ export default function ContactPage() {
                     <input
                       type="text"
                       placeholder="Smith"
-                      className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#8FBFBA]/60 transition-colors"
+                      className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#6FAFA6]/60 transition-colors"
                     />
                   </div>
                 </div>
@@ -152,7 +152,7 @@ export default function ContactPage() {
                   <input
                     type="text"
                     placeholder="Acme Operations LLC"
-                    className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#8FBFBA]/60 transition-colors"
+                    className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#6FAFA6]/60 transition-colors"
                   />
                 </div>
 
@@ -163,7 +163,7 @@ export default function ContactPage() {
                   <input
                     type="email"
                     placeholder="jane@yourcompany.com"
-                    className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#8FBFBA]/60 transition-colors"
+                    className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#6FAFA6]/60 transition-colors"
                   />
                 </div>
 
@@ -171,7 +171,7 @@ export default function ContactPage() {
                   <label className="block text-xs font-semibold text-[#AEB7C2] uppercase tracking-wider mb-2">
                     Industry
                   </label>
-                  <select className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm focus:outline-none focus:border-[#8FBFBA]/60 transition-colors appearance-none">
+                  <select className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm focus:outline-none focus:border-[#6FAFA6]/60 transition-colors appearance-none">
                     <option value="" className="text-[#AEB7C2]/50">Select your industry</option>
                     {industries.map((ind) => (
                       <option key={ind} value={ind}>{ind}</option>
@@ -183,7 +183,7 @@ export default function ContactPage() {
                   <label className="block text-xs font-semibold text-[#AEB7C2] uppercase tracking-wider mb-2">
                     Primary Challenge
                   </label>
-                  <select className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm focus:outline-none focus:border-[#8FBFBA]/60 transition-colors appearance-none">
+                  <select className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm focus:outline-none focus:border-[#6FAFA6]/60 transition-colors appearance-none">
                     <option value="">What's slowing you down most?</option>
                     {challenges.map((c) => (
                       <option key={c} value={c}>{c}</option>
@@ -198,13 +198,13 @@ export default function ContactPage() {
                   <textarea
                     rows={4}
                     placeholder="Anything else we should know before the assessment — size of team, current tools, timeline pressures..."
-                    className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#8FBFBA]/60 transition-colors resize-none"
+                    className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#6FAFA6]/60 transition-colors resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-[#8FBFBA] hover:bg-[#72A8A3] text-[#0B1220] font-semibold py-4 rounded-lg transition-colors text-sm"
+                  className="w-full bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-semibold py-4 rounded-lg transition-colors text-sm"
                 >
                   Request Free Assessment
                 </button>

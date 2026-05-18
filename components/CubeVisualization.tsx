@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 
@@ -52,8 +52,8 @@ function IsoCube({ cx, cy, hw, d }: CubeProps) {
         strokeWidth="0.7"
       />
       {/* Subtle top-edge highlight line */}
-      <line x1={N[0]} y1={N[1]} x2={E[0]} y2={E[1]} stroke="#8FBFBA" strokeWidth="1" opacity="0.45" />
-      <line x1={N[0]} y1={N[1]} x2={W[0]} y2={W[1]} stroke="#8FBFBA" strokeWidth="1" opacity="0.45" />
+      <line x1={N[0]} y1={N[1]} x2={E[0]} y2={E[1]} stroke="#6FAFA6" strokeWidth="1" opacity="0.45" />
+      <line x1={N[0]} y1={N[1]} x2={W[0]} y2={W[1]} stroke="#6FAFA6" strokeWidth="1" opacity="0.45" />
     </g>
   );
 }
@@ -62,10 +62,10 @@ function IsoCube({ cx, cy, hw, d }: CubeProps) {
 function BarChartIcon({ x, y }: { x: number; y: number }) {
   return (
     <g transform={`translate(${x}, ${y})`} opacity="0.85">
-      <rect x="-11" y="1" width="4" height="10" fill="#8FBFBA" rx="0.5" />
-      <rect x="-5" y="-5" width="4" height="16" fill="#8FBFBA" rx="0.5" />
-      <rect x="1" y="-2" width="4" height="13" fill="#8FBFBA" rx="0.5" />
-      <rect x="7" y="3" width="4" height="8" fill="#8FBFBA" rx="0.5" />
+      <rect x="-11" y="1" width="4" height="10" fill="#6FAFA6" rx="0.5" />
+      <rect x="-5" y="-5" width="4" height="16" fill="#6FAFA6" rx="0.5" />
+      <rect x="1" y="-2" width="4" height="13" fill="#6FAFA6" rx="0.5" />
+      <rect x="7" y="3" width="4" height="8" fill="#6FAFA6" rx="0.5" />
     </g>
   );
 }
@@ -73,12 +73,12 @@ function BarChartIcon({ x, y }: { x: number; y: number }) {
 function NodeIcon({ x, y }: { x: number; y: number }) {
   return (
     <g transform={`translate(${x}, ${y})`} opacity="0.85">
-      <circle cx="0" cy="-7" r="3.5" fill="none" stroke="#8FBFBA" strokeWidth="1.3" />
-      <circle cx="-7" cy="5" r="3.5" fill="none" stroke="#8FBFBA" strokeWidth="1.3" />
-      <circle cx="7" cy="5" r="3.5" fill="none" stroke="#8FBFBA" strokeWidth="1.3" />
-      <line x1="0" y1="-3.5" x2="-4" y2="2" stroke="#8FBFBA" strokeWidth="1.1" />
-      <line x1="0" y1="-3.5" x2="4" y2="2" stroke="#8FBFBA" strokeWidth="1.1" />
-      <line x1="-3.5" y1="5" x2="3.5" y2="5" stroke="#8FBFBA" strokeWidth="1.1" />
+      <circle cx="0" cy="-7" r="3.5" fill="none" stroke="#6FAFA6" strokeWidth="1.3" />
+      <circle cx="-7" cy="5" r="3.5" fill="none" stroke="#6FAFA6" strokeWidth="1.3" />
+      <circle cx="7" cy="5" r="3.5" fill="none" stroke="#6FAFA6" strokeWidth="1.3" />
+      <line x1="0" y1="-3.5" x2="-4" y2="2" stroke="#6FAFA6" strokeWidth="1.1" />
+      <line x1="0" y1="-3.5" x2="4" y2="2" stroke="#6FAFA6" strokeWidth="1.1" />
+      <line x1="-3.5" y1="5" x2="3.5" y2="5" stroke="#6FAFA6" strokeWidth="1.1" />
     </g>
   );
 }
@@ -89,12 +89,12 @@ function TrendIcon({ x, y }: { x: number; y: number }) {
       <polyline
         points="-11,6 -5,-5 2,0 11,-8"
         fill="none"
-        stroke="#8FBFBA"
+        stroke="#6FAFA6"
         strokeWidth="1.6"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <circle cx="11" cy="-8" r="2.5" fill="#8FBFBA" opacity="0.75" />
+      <circle cx="11" cy="-8" r="2.5" fill="#6FAFA6" opacity="0.75" />
     </g>
   );
 }
@@ -103,8 +103,8 @@ function GearIcon({ x, y }: { x: number; y: number }) {
   const spokes = [0, 45, 90, 135, 180, 225, 270, 315];
   return (
     <g transform={`translate(${x}, ${y})`} opacity="0.85">
-      <circle cx="0" cy="0" r="6" fill="none" stroke="#8FBFBA" strokeWidth="1.3" />
-      <circle cx="0" cy="0" r="2.5" fill="#8FBFBA" opacity="0.85" />
+      <circle cx="0" cy="0" r="6" fill="none" stroke="#6FAFA6" strokeWidth="1.3" />
+      <circle cx="0" cy="0" r="2.5" fill="#6FAFA6" opacity="0.85" />
       {spokes.map((angle) => {
         const rad = (angle * Math.PI) / 180;
         return (
@@ -114,7 +114,7 @@ function GearIcon({ x, y }: { x: number; y: number }) {
             y1={Math.sin(rad) * 6.5}
             x2={Math.cos(rad) * 10}
             y2={Math.sin(rad) * 10}
-            stroke="#8FBFBA"
+            stroke="#6FAFA6"
             strokeWidth="1.8"
             strokeLinecap="round"
           />
@@ -184,8 +184,8 @@ export default function CubeVisualization() {
       >
         <defs>
           <radialGradient id="cg" cx="45%" cy="50%" r="55%">
-            <stop offset="0%"   stopColor="#8FBFBA" stopOpacity="0.08" />
-            <stop offset="100%" stopColor="#8FBFBA" stopOpacity="0"    />
+            <stop offset="0%"   stopColor="#6FAFA6" stopOpacity="0.08" />
+            <stop offset="100%" stopColor="#6FAFA6" stopOpacity="0"    />
           </radialGradient>
         </defs>
 
@@ -193,7 +193,7 @@ export default function CubeVisualization() {
         <ellipse cx="290" cy="200" rx="230" ry="175" fill="url(#cg)" />
 
         {/* ── Network lines ── */}
-        <g stroke="#8FBFBA" strokeOpacity="0.38" strokeWidth="1.2" fill="none">
+        <g stroke="#6FAFA6" strokeOpacity="0.38" strokeWidth="1.2" fill="none">
           {/* Cube interconnections */}
           <line x1={centers[0].x} y1={centers[0].y} x2={centers[1].x} y2={centers[1].y} />
           <line x1={centers[1].x} y1={centers[1].y} x2={centers[2].x} y2={centers[2].y} />
@@ -223,16 +223,16 @@ export default function CubeVisualization() {
         {/* ── Network intersection dots ── */}
         {networkDots.map((d, i) => (
           <g key={`nd-${i}`}>
-            <circle cx={d.x} cy={d.y} r="7" fill="#8FBFBA" opacity="0.15" />
-            <circle cx={d.x} cy={d.y} r="3.5" fill="#8FBFBA" opacity="0.85" />
+            <circle cx={d.x} cy={d.y} r="7" fill="#6FAFA6" opacity="0.15" />
+            <circle cx={d.x} cy={d.y} r="3.5" fill="#6FAFA6" opacity="0.85" />
           </g>
         ))}
 
         {/* ── Label endpoint dots ── */}
         {labelDots.map((d, i) => (
           <g key={`ld-${i}`}>
-            <circle cx={d.x} cy={d.y} r="7"   fill="#8FBFBA" opacity="0.18" />
-            <circle cx={d.x} cy={d.y} r="3.5" fill="#8FBFBA" opacity="0.95" />
+            <circle cx={d.x} cy={d.y} r="7"   fill="#6FAFA6" opacity="0.18" />
+            <circle cx={d.x} cy={d.y} r="3.5" fill="#6FAFA6" opacity="0.95" />
           </g>
         ))}
 

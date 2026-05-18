@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, type Variants } from "framer-motion";
 import CubeVisualization from "./CubeVisualization";
@@ -46,7 +46,7 @@ export default function Hero() {
           {/* Eyebrow */}
           <motion.p
             variants={fadeUp}
-            className="font-mono text-[#8FBFBA] text-[10px] font-bold tracking-[0.28em] uppercase mb-8"
+            className="font-mono text-[#6FAFA6] text-[13px] font-bold tracking-[0.28em] uppercase mb-8 whitespace-nowrap"
           >
             Modern Solutions.&nbsp; Intelligent Systems.&nbsp; Real Results.
           </motion.p>
@@ -60,7 +60,7 @@ export default function Hero() {
               <span className="block text-[clamp(52px,7vw,92px)] text-[#F4F7F9]">
                 Automate.
               </span>
-              <span className="block text-[clamp(52px,7vw,92px)] text-[#8FBFBA]">
+              <span className="block text-[clamp(52px,7vw,92px)] text-[#6FAFA6]">
                 Elevate.
               </span>
             </h1>
@@ -78,7 +78,7 @@ export default function Hero() {
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4">
             <a
               href="/contact"
-              className="group inline-flex items-center justify-center gap-3 font-mono bg-[#8FBFBA] hover:bg-[#A8D4CF] text-[#0B1220] font-bold text-[10px] tracking-[0.16em] uppercase px-8 py-4 rounded-md transition-colors duration-200"
+              className="group inline-flex items-center justify-center gap-3 font-mono bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-bold text-[13px] tracking-[0.16em] uppercase px-8 py-4 rounded-md transition-colors duration-200"
             >
               Let&apos;s Transform
               <span className="transition-transform duration-200 group-hover:translate-x-1">
@@ -87,7 +87,7 @@ export default function Hero() {
             </a>
             <a
               href="/services"
-              className="inline-flex items-center justify-center font-mono border border-[#AEB7C2]/25 hover:border-[#8FBFBA]/50 text-[#AEB7C2] hover:text-[#F4F7F9] font-bold text-[10px] tracking-[0.16em] uppercase px-8 py-4 rounded-md transition-colors duration-200"
+              className="inline-flex items-center justify-center font-mono border border-[#AEB7C2]/25 hover:border-[#6FAFA6]/50 text-[#AEB7C2] hover:text-[#F4F7F9] font-bold text-[13px] tracking-[0.16em] uppercase px-8 py-4 rounded-md transition-colors duration-200"
             >
               Explore Services
             </a>

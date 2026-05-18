@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
@@ -8,12 +8,12 @@ import { motion, useInView } from "framer-motion";
 function IndustriesIcon() {
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden>
-      <circle cx="18" cy="11" r="5"   stroke="#8FBFBA" strokeWidth="1.4" />
-      <circle cx="9"  cy="26" r="3.5" stroke="#8FBFBA" strokeWidth="1.4" />
-      <circle cx="27" cy="26" r="3.5" stroke="#8FBFBA" strokeWidth="1.4" />
-      <path d="M12.5 24C14 20 22 20 23.5 24" stroke="#8FBFBA" strokeWidth="1.2" fill="none" />
-      <path d="M4 34c1-3.5 4.5-5 4.5-5"  stroke="#8FBFBA" strokeWidth="1.2" fill="none" strokeLinecap="round" />
-      <path d="M32 34c-1-3.5-4.5-5-4.5-5" stroke="#8FBFBA" strokeWidth="1.2" fill="none" strokeLinecap="round" />
+      <circle cx="18" cy="11" r="5"   stroke="#6FAFA6" strokeWidth="1.4" />
+      <circle cx="9"  cy="26" r="3.5" stroke="#6FAFA6" strokeWidth="1.4" />
+      <circle cx="27" cy="26" r="3.5" stroke="#6FAFA6" strokeWidth="1.4" />
+      <path d="M12.5 24C14 20 22 20 23.5 24" stroke="#6FAFA6" strokeWidth="1.2" fill="none" />
+      <path d="M4 34c1-3.5 4.5-5 4.5-5"  stroke="#6FAFA6" strokeWidth="1.2" fill="none" strokeLinecap="round" />
+      <path d="M32 34c-1-3.5-4.5-5-4.5-5" stroke="#6FAFA6" strokeWidth="1.2" fill="none" strokeLinecap="round" />
     </svg>
   );
 }
@@ -21,10 +21,10 @@ function IndustriesIcon() {
 function SystemsIcon() {
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden>
-      <line x1="3"  y1="32" x2="33" y2="32" stroke="#8FBFBA" strokeWidth="1.4" />
-      <rect x="4"  y="22" width="6" height="10" rx="0.5" stroke="#8FBFBA" strokeWidth="1.3" />
-      <rect x="14" y="15" width="6" height="17" rx="0.5" stroke="#8FBFBA" strokeWidth="1.3" />
-      <rect x="24" y="9"  width="6" height="23" rx="0.5" stroke="#8FBFBA" strokeWidth="1.3" />
+      <line x1="3"  y1="32" x2="33" y2="32" stroke="#6FAFA6" strokeWidth="1.4" />
+      <rect x="4"  y="22" width="6" height="10" rx="0.5" stroke="#6FAFA6" strokeWidth="1.3" />
+      <rect x="14" y="15" width="6" height="17" rx="0.5" stroke="#6FAFA6" strokeWidth="1.3" />
+      <rect x="24" y="9"  width="6" height="23" rx="0.5" stroke="#6FAFA6" strokeWidth="1.3" />
     </svg>
   );
 }
@@ -32,10 +32,10 @@ function SystemsIcon() {
 function WorkflowsIcon() {
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden>
-      <circle cx="18" cy="18" r="13" stroke="#8FBFBA" strokeWidth="1.4" />
+      <circle cx="18" cy="18" r="13" stroke="#6FAFA6" strokeWidth="1.4" />
       <polyline
         points="18,9 18,18 24,24"
-        stroke="#8FBFBA"
+        stroke="#6FAFA6"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -49,7 +49,7 @@ function SuccessIcon() {
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden>
       <path
         d="M18 4l3.5 10.5H32l-9 6.5 3.5 10.5-9-6.5-9 6.5 3.5-10.5-9-6.5h10.5L18 4z"
-        stroke="#8FBFBA"
+        stroke="#6FAFA6"
         strokeWidth="1.4"
         strokeLinejoin="round"
       />

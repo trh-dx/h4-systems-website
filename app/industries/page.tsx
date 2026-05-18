@@ -1,4 +1,4 @@
-﻿import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const industries = [
@@ -134,7 +134,7 @@ export default function IndustriesPage() {
       {/* ── Hero ── */}
       <section className="pt-36 pb-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-4">Industry Solutions</div>
+          <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">Industry Solutions</div>
           <h1 className="text-4xl sm:text-5xl font-bold text-[#F4F7F9] leading-tight tracking-tight mb-6">
             We understand your industry.<br className="hidden sm:block" /> Not just your technology.
           </h1>
@@ -149,11 +149,11 @@ export default function IndustriesPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {industries.map((ind) => (
-              <div key={ind.name} className="bg-[#1A2333] border border-[#AEB7C2]/15 rounded-xl overflow-hidden hover:border-[#8FBFBA]/30 transition-colors">
+              <div key={ind.name} className="bg-[#1A2333] border border-[#AEB7C2]/15 rounded-xl overflow-hidden hover:border-[#6FAFA6]/30 transition-colors">
                 {/* Card header */}
                 <div className="px-7 py-5 border-b border-[#AEB7C2]/10 flex items-center justify-between">
                   <h3 className="text-[#F4F7F9] font-semibold text-lg">{ind.name}</h3>
-                  <span className="text-xs font-semibold tracking-wider uppercase text-[#8FBFBA] bg-[#8FBFBA]/10 border border-[#8FBFBA]/20 px-2.5 py-1 rounded-full">
+                  <span className="text-xs font-semibold tracking-wider uppercase text-[#6FAFA6] bg-[#6FAFA6]/10 border border-[#6FAFA6]/20 px-2.5 py-1 rounded-full">
                     {ind.tag}
                   </span>
                 </div>
@@ -174,11 +174,11 @@ export default function IndustriesPage() {
                     </div>
                     {/* Opportunities */}
                     <div>
-                      <div className="text-xs font-semibold tracking-widest uppercase text-[#8FBFBA] mb-3">Modernization Opportunities</div>
+                      <div className="text-xs font-semibold tracking-widest uppercase text-[#6FAFA6] mb-3">Modernization Opportunities</div>
                       <ul className="space-y-2">
                         {ind.opportunities.map((o) => (
                           <li key={o} className="flex items-start gap-2 text-xs text-[#AEB7C2] leading-relaxed">
-                            <span className="mt-1.5 w-1 h-1 rounded-full bg-[#8FBFBA] flex-shrink-0" />
+                            <span className="mt-1.5 w-1 h-1 rounded-full bg-[#6FAFA6] flex-shrink-0" />
                             {o}
                           </li>
                         ))}
@@ -202,14 +202,14 @@ export default function IndustriesPage() {
       <section className="py-24 px-6 bg-[#1A2333]">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12">
-            <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-3">Across Every Industry</div>
+            <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-3">Across Every Industry</div>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#F4F7F9] mb-3">The same operational challenges. The same modern solutions.</h2>
             <p className="text-[#AEB7C2] max-w-xl">Industry context matters, but the core modernization levers are consistent across every business we work with.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {commonThreads.map((t) => (
               <div key={t.title} className="bg-[#0B1220] border border-[#AEB7C2]/15 rounded-xl p-6">
-                <div className="w-8 h-0.5 bg-[#8FBFBA] mb-4 rounded-full" />
+                <div className="w-8 h-0.5 bg-[#6FAFA6] mb-4 rounded-full" />
                 <h3 className="text-[#F4F7F9] font-semibold mb-3">{t.title}</h3>
                 <p className="text-[#AEB7C2] text-sm leading-relaxed">{t.desc}</p>
               </div>
@@ -221,7 +221,7 @@ export default function IndustriesPage() {
       {/* ── Assessment CTA ── */}
       <section className="py-24 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="text-[#8FBFBA] text-xs font-semibold tracking-widest uppercase mb-4">Industry-Specific Assessment</div>
+          <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">Industry-Specific Assessment</div>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#F4F7F9] mb-5">
             Let us assess your specific operational opportunity.
           </h2>
@@ -229,10 +229,10 @@ export default function IndustriesPage() {
             Every assessment is scoped to your industry, your systems, and your growth goals — not a generic technology checklist.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="inline-block bg-[#8FBFBA] hover:bg-[#72A8A3] text-[#0B1220] font-semibold px-8 py-4 rounded-lg transition-colors">
+            <a href="/contact" className="inline-block bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-semibold px-8 py-4 rounded-lg transition-colors">
               Schedule a Free Assessment
             </a>
-            <a href="/case-studies" className="inline-block border border-[#8FBFBA] hover:bg-[#8FBFBA]/10 text-[#8FBFBA] font-semibold px-8 py-4 rounded-lg transition-colors">
+            <a href="/case-studies" className="inline-block border border-[#6FAFA6] hover:bg-[#6FAFA6]/10 text-[#6FAFA6] font-semibold px-8 py-4 rounded-lg transition-colors">
               View Case Studies
             </a>
           </div>

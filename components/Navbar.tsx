@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -43,7 +43,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="font-mono text-[10px] font-bold tracking-[0.2em] text-[#AEB7C2] hover:text-[#F4F7F9] transition-colors duration-200"
+                className="font-mono text-[13px] font-bold tracking-[0.2em] text-[#AEB7C2] hover:text-[#F4F7F9] transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -53,7 +53,7 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <a
             href="/contact"
-            className="hidden lg:inline-flex items-center font-mono bg-[#8FBFBA] hover:bg-[#A8D4CF] text-[#0B1220] font-bold text-[10px] tracking-[0.18em] px-6 py-3 rounded-md transition-colors duration-200"
+            className="hidden lg:inline-flex items-center font-mono bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-bold text-[13px] tracking-[0.18em] px-6 py-3 rounded-md transition-colors duration-200"
           >
             LET&apos;S TALK
           </a>
@@ -100,7 +100,7 @@ export default function Navbar() {
               <a
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="mt-4 inline-flex items-center justify-center font-mono bg-[#8FBFBA] hover:bg-[#A8D4CF] text-[#0B1220] font-bold text-[10px] tracking-[0.18em] px-6 py-3.5 rounded-md transition-colors"
+                className="mt-4 inline-flex items-center justify-center font-mono bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-bold text-[10px] tracking-[0.18em] px-6 py-3.5 rounded-md transition-colors"
               >
                 LET&apos;S TALK
               </a>

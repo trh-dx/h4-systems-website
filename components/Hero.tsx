@@ -3,7 +3,7 @@
 import { motion, type Variants } from "framer-motion";
 import CubeVisualization from "./CubeVisualization";
 
-const bezier = [0.25, 0.46, 0.45, 0.94] as [number, number, number, number];
+const bezier = [0.25, 0.46, 0.45, 0.94] as const;
 
 const container: Variants = {
   hidden: {},

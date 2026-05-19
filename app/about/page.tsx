@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "About — H Four Systems",
+  description: "Learn how H Four Systems approaches business modernization — operational-first, staged delivery, and a track record across 6 industries.",
+};
 
 const trustMetrics = [
   { stat: "40+", label: "Systems Delivered", sub: "Across 6 industries" },

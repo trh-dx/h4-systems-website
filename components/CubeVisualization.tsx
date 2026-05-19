@@ -181,7 +181,10 @@ export default function CubeVisualization() {
         viewBox="0 0 580 420"
         className="w-full h-full"
         style={{ overflow: "visible" }}
+        role="img"
+        aria-labelledby="cube-viz-title"
       >
+        <title id="cube-viz-title">Diagram of interconnected business systems: Automation, Integration, Insights, and Growth</title>
         <defs>
           <radialGradient id="cg" cx="45%" cy="50%" r="55%">
             <stop offset="0%"   stopColor="#6FAFA6" stopOpacity="0.08" />

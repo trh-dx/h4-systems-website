@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Our Process — H Four Systems",
+  description: "A four-phase engagement model: Discover, Architect, Build, and Optimize. High-impact improvements delivered within weeks, not months.",
+};
 
 const phases = [
   {

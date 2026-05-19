@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Industries — H Four Systems",
+  description: "H Four Systems serves mortgage & finance, professional services, construction, healthcare, retail, and agriculture — with systems built around how each industry actually operates.",
+};
 
 const industries = [
   {

@@ -22,7 +22,7 @@ Built with Next.js (App Router), Tailwind CSS v4, and Framer Motion.
 
 ## Brand
 
-**Logo:** `public/brand_assets/H4 Systems Logo.png` — displayed at `h-20` inside a `h-24` navbar. src is URL-encoded as `/brand_assets/H4%20Systems%20Logo.png`.
+**Logo:** `public/brand_assets/h4-systems-logo.svg` — true vector SVG, displayed at `h-20` inside a `h-24` navbar via a plain `<img>` tag with `background: #0B1220` to match the navbar background. (Note: Next.js `<Image>` is intentionally avoided for SVGs as it doesn't optimize them and can cause background rendering issues.)
 
 **Colors**
 
@@ -74,11 +74,54 @@ npm run build   # production build
 npm run lint    # ESLint
 ```
 
+**Screenshots**
+
+Puppeteer is installed locally. With the dev server running:
+
+```bash
+node screenshot.mjs http://localhost:3000
+node screenshot.mjs http://localhost:3000 label   # saves as screenshot-N-label.png
+```
+
+Screenshots are saved to `./temporary screenshots/` and auto-incremented.
+
+---
+
+## Project Structure
+
+```
+app/              — Next.js App Router pages
+components/       — Shared UI components
+public/
+  brand_assets/   — Logos and brand images
+skills/           — H4 skill files (audit, copy, design, automation, etc.)
+orchestrator/     — Master routing logic for skill selection
+```
+
+---
+
+## Skills
+
+H4 skill files guide Claude on how to handle specific types of requests.
+
+| File | Purpose |
+|---|---|
+| `skills/website-audit.md` | Analyze, score, and produce modernization recommendations |
+| `skills/conversion-copywriting.md` | Write and rewrite conversion-focused messaging |
+| `skills/design-system.md` | Enforce H4 design consistency across all projects |
+| `skills/technical-architecture.md` | Advise on stack, deployment, and Next.js conventions |
+| `skills/automation-planner.md` | Design practical automation workflows |
+| `skills/dashboard-strategy.md` | Plan KPI dashboards and operational reporting |
+| `skills/proposal-generator.md` | Generate scoped, priced, phased client proposals |
+
+The `orchestrator/h4-master-router.md` file determines which skill(s) to activate based on the request type.
+
 ---
 
 ## Stack
 
 - [Next.js](https://nextjs.org) — App Router
+- [TypeScript](https://www.typescriptlang.org)
 - [Tailwind CSS](https://tailwindcss.com) — v4
 - [Framer Motion](https://www.framer.com/motion/) — animations
 - [Montserrat + Roboto Mono](https://fonts.google.com) — via next/font/google

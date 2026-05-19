@@ -14,10 +14,12 @@ const navLinks = [
 function H4Logo() {
   return (
     <a href="/" className="flex items-center group">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/brand_assets/H4%20Systems%20Logo.png"
+        src="/brand_assets/h4-systems-logo.svg"
         alt="H Four Systems"
-        className="h-20 w-auto object-contain"
+        className="h-20 w-auto"
+        style={{ background: '#0B1220' }}
       />
     </a>
   );

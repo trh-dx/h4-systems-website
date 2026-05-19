@@ -1,5 +1,3 @@
-"use client";
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -121,7 +119,7 @@ export default function ContactPage() {
               <div className="text-[#F4F7F9] font-bold text-xl mb-2">Request Your Assessment</div>
               <p className="text-[#AEB7C2] text-sm mb-8">We'll follow up within one business day to confirm a time that works.</p>
 
-              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-xs font-semibold text-[#AEB7C2] uppercase tracking-wider mb-2">

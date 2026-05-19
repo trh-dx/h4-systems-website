@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Case Studies — H Four Systems",
+  description: "Real results from real engagements. See how H Four Systems cut closing times, eliminated manual workflows, and modernized operations across industries.",
+};
 
 const featured = {
   industry: "Mortgage Operations",

@@ -153,7 +153,7 @@ function ServiceCard({ service, delay }: { service: Service; delay: number }) {
       ref={ref}
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
+      transition={{ duration: 0.6, delay, ease: [0.25, 0.46, 0.45, 0.94] as const }}
       className="group bg-[#0B1220] border border-[#AEB7C2]/10 rounded-2xl p-8 flex flex-col hover:border-[#6FAFA6]/30 hover:shadow-[0_8px_32px_rgba(0,0,0,0.35)] transition-all duration-300"
     >
       {/* Icon */}

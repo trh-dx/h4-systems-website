@@ -83,18 +83,14 @@ function NodeIcon({ x, y }: { x: number; y: number }) {
   );
 }
 
-function TrendIcon({ x, y }: { x: number; y: number }) {
+function BrowserIcon({ x, y }: { x: number; y: number }) {
   return (
     <g transform={`translate(${x}, ${y})`} opacity="0.85">
-      <polyline
-        points="-11,6 -5,-5 2,0 11,-8"
-        fill="none"
-        stroke="#6FAFA6"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <circle cx="11" cy="-8" r="2.5" fill="#6FAFA6" opacity="0.75" />
+      <rect x="-11" y="-9" width="22" height="18" rx="1.5" fill="none" stroke="#6FAFA6" strokeWidth="1.3" />
+      <line x1="-11" y1="-3" x2="11" y2="-3" stroke="#6FAFA6" strokeWidth="1.1" />
+      <circle cx="-7.5" cy="-6" r="1.2" fill="#6FAFA6" opacity="0.6" />
+      <circle cx="-4"   cy="-6" r="1.2" fill="#6FAFA6" opacity="0.6" />
+      <circle cx="-0.5" cy="-6" r="1.2" fill="#6FAFA6" opacity="0.6" />
     </g>
   );
 }
@@ -218,10 +214,10 @@ export default function CubeVisualization() {
         <IsoCube {...cubes[3]} />   {/* D — bottom */}
 
         {/* ── Icons on cube top faces ── */}
-        <BarChartIcon x={centers[0].x} y={centers[0].y} />
-        <NodeIcon     x={centers[1].x} y={centers[1].y} />
-        <TrendIcon    x={centers[2].x} y={centers[2].y} />
-        <GearIcon     x={centers[3].x} y={centers[3].y} />
+        <BarChartIcon x={centers[0].x} y={centers[0].y} />  {/* A — decorative */}
+        <BrowserIcon  x={centers[1].x} y={centers[1].y} />  {/* B — WEBSITES */}
+        <GearIcon     x={centers[2].x} y={centers[2].y} />  {/* C — AUTOMATION */}
+        <NodeIcon     x={centers[3].x} y={centers[3].y} />  {/* D — INTEGRATION */}
 
         {/* ── Network intersection dots ── */}
         {networkDots.map((d, i) => (

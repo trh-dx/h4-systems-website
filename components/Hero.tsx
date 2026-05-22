@@ -46,7 +46,7 @@ export default function Hero() {
           {/* Eyebrow */}
           <motion.p
             variants={fadeUp}
-            className="font-mono text-[#6FAFA6] text-[13px] font-bold tracking-[0.28em] uppercase mb-8"
+            className="font-mono text-[#6FAFA6] text-[13px] font-bold tracking-[0.28em] uppercase mb-8 sm:whitespace-nowrap"
           >
             Modern Solutions.&nbsp; Intelligent Systems.&nbsp; Real Results.
           </motion.p>

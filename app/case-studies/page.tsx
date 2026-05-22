@@ -80,7 +80,7 @@ export default function CaseStudiesPage() {
       <section className="pt-36 pb-20 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">Transformation Case Studies</div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-[#F4F7F9] leading-tight tracking-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F4F7F9] leading-tight tracking-tight mb-6">
             Operational modernization<br className="hidden sm:block" /> in practice.
           </h1>
           <p className="text-lg text-[#AEB7C2] leading-relaxed max-w-2xl">

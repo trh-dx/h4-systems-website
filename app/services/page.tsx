@@ -215,7 +215,7 @@ export default function ServicesPage() {
 
             <div className="p-6 sm:p-8">
               {/* KPI row */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                 {kpiCards.map((k) => (
                   <div key={k.label} className="bg-[#1A2333] border border-[#AEB7C2]/10 rounded-xl p-5">
                     <div className="text-[#AEB7C2]/60 text-xs mb-3 uppercase tracking-wider">{k.label}</div>
@@ -240,7 +240,7 @@ export default function ServicesPage() {
                         <div className="text-[#F4F7F9] text-sm truncate">{row.name}</div>
                       </div>
                       <div className="flex items-center gap-3">
-                        <div className="w-24 bg-[#0B1220] rounded-full h-1.5 overflow-hidden">
+                        <div className="w-16 sm:w-20 md:w-24 bg-[#0B1220] rounded-full h-1.5 overflow-hidden">
                           <div
                             className="h-1.5 rounded-full"
                             style={{
@@ -249,7 +249,7 @@ export default function ServicesPage() {
                             }}
                           />
                         </div>
-                        <span className={`text-xs font-medium w-20 text-right ${row.status === "Operational" ? "text-[#6FAFA6]" : "text-[#AEB7C2]"}`}>
+                        <span className={`text-xs font-medium w-16 sm:w-20 text-right ${row.status === "Operational" ? "text-[#6FAFA6]" : "text-[#AEB7C2]"}`}>
                           {row.status}
                         </span>
                       </div>
@@ -273,11 +273,11 @@ export default function ServicesPage() {
 
           {/* Flow diagram */}
           <div className="bg-[#1A2333] border border-[#AEB7C2]/15 rounded-2xl p-8 sm:p-10">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-0">
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-0">
               {workflowSteps.map((step, i) => (
-                <div key={step.label} className="flex flex-col sm:flex-row items-start sm:items-center flex-1 min-w-0">
+                <div key={step.label} className="flex flex-col md:flex-row items-start md:items-center flex-1 min-w-0">
                   {/* Step node */}
-                  <div className={`flex-shrink-0 rounded-xl p-4 border text-center w-full sm:w-auto sm:min-w-[120px] ${
+                  <div className={`flex-shrink-0 rounded-xl p-4 border text-center w-full md:w-auto md:min-w-[120px] ${
                     step.type === "trigger"
                       ? "bg-[#6FAFA6]/10 border-[#6FAFA6]/30"
                       : step.type === "system"
@@ -289,12 +289,12 @@ export default function ServicesPage() {
                   </div>
                   {/* Connector */}
                   {i < workflowSteps.length - 1 && (
-                    <div className="flex-shrink-0 flex sm:flex-row flex-col items-center">
-                      <div className="sm:w-4 sm:h-px w-px h-4 bg-[#AEB7C2]/25 my-1 sm:my-0 sm:mx-1" />
-                      <svg className="w-3 h-3 text-[#AEB7C2]/40 sm:rotate-0 rotate-90" fill="currentColor" viewBox="0 0 20 20">
+                    <div className="flex-shrink-0 flex md:flex-row flex-col items-center">
+                      <div className="md:w-4 md:h-px w-px h-4 bg-[#AEB7C2]/25 my-1 md:my-0 md:mx-1" />
+                      <svg className="w-3 h-3 text-[#AEB7C2]/40 md:rotate-0 rotate-90" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                       </svg>
-                      <div className="sm:w-4 sm:h-px w-px h-4 bg-[#AEB7C2]/25 my-1 sm:my-0 sm:mx-1" />
+                      <div className="md:w-4 md:h-px w-px h-4 bg-[#AEB7C2]/25 my-1 md:my-0 md:mx-1" />
                     </div>
                   )}
                 </div>
@@ -328,7 +328,7 @@ export default function ServicesPage() {
             <h2 className="text-2xl sm:text-3xl font-bold text-[#F4F7F9] mb-3">Connect your existing tools. Eliminate the gaps.</h2>
             <p className="text-[#AEB7C2] max-w-xl">We integrate with the platforms your business already uses — connecting them into a unified operational layer.</p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {integrations.map((int) => (
               <div key={int.name} className="bg-[#0B1220] border border-[#AEB7C2]/15 rounded-xl p-5 text-center hover:border-[#6FAFA6]/30 transition-colors">
                 <div className="text-[#F4F7F9] font-semibold text-sm mb-2">{int.name}</div>

@@ -65,7 +65,7 @@ export default function AboutPage() {
       <section className="pt-36 pb-20 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">About H Four Systems</div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-[#F4F7F9] leading-tight tracking-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F4F7F9] leading-tight tracking-tight mb-6">
             We modernize how businesses operate.
           </h1>
           <p className="text-lg text-[#AEB7C2] leading-relaxed max-w-2xl">
@@ -77,7 +77,7 @@ export default function AboutPage() {
       {/* ── Positioning ── */}
       <section className="pb-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start">
             <div>
               <h2 className="text-2xl sm:text-3xl font-bold text-[#F4F7F9] mb-6">What we are — and what we are not.</h2>
               <p className="text-[#AEB7C2] leading-relaxed mb-8">
@@ -122,10 +122,10 @@ export default function AboutPage() {
       <section className="py-24 px-6 bg-[#1A2333]">
         <div className="max-w-6xl mx-auto">
           <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-8 text-center">By the Numbers</div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {trustMetrics.map((m) => (
               <div key={m.label} className="bg-[#0B1220] border border-[#AEB7C2]/15 rounded-xl p-8 text-center">
-                <div className="text-4xl sm:text-5xl font-bold text-[#6FAFA6] mb-2 tracking-tight">{m.stat}</div>
+                <div className="text-3xl sm:text-4xl font-bold text-[#6FAFA6] mb-2 tracking-tight">{m.stat}</div>
                 <div className="text-[#F4F7F9] font-semibold text-sm mb-1">{m.label}</div>
                 <div className="text-[#AEB7C2] text-xs">{m.sub}</div>
               </div>

@@ -62,7 +62,7 @@ export default function ContactPage() {
       <section className="pt-36 pb-16 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">Business Modernization Assessment</div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-[#F4F7F9] leading-tight tracking-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F4F7F9] leading-tight tracking-tight mb-6">
             Understand your modernization opportunity. At no cost.
           </h1>
           <p className="text-lg text-[#AEB7C2] leading-relaxed max-w-2xl">
@@ -74,7 +74,7 @@ export default function ContactPage() {
       {/* ── Assessment detail + Form ── */}
       <section className="pb-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-start">
 
             {/* Left: Assessment detail */}
             <div className="space-y-8">

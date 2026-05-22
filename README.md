@@ -44,7 +44,14 @@ Built with Next.js (App Router), Tailwind CSS v4, and Framer Motion.
 
 **Font size conventions**
 - Navbar links, CTA buttons, and eyebrow labels: `text-[13px]`
+- Page hero h1s: `text-3xl sm:text-4xl md:text-5xl` — three-step scale, no jarring jumps on mobile
 - Do not use `transition-all` — use specific properties (`transition-colors`, `transition-[border-color,box-shadow,transform]`, etc.)
+
+**Mobile-first responsive conventions**
+- All grids must collapse to `grid-cols-1` on xs before scaling up (e.g. `grid-cols-1 sm:grid-cols-2 lg:grid-cols-4`)
+- Multi-step horizontal flows (e.g. workflow diagrams) use `flex-col md:flex-row` — not `sm:flex-row` — to avoid overflow on 640px screens
+- Eyebrow/label text must not use `whitespace-nowrap`; let it wrap on small screens
+- Gap utilities on 2-col grids should reduce on mobile: `gap-6 lg:gap-12`
 
 ---
 

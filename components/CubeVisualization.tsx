@@ -156,10 +156,10 @@ const labelDots = [
 ];
 
 const labels = [
-  { text: "AUTOMATION",  sub: "Smart Workflows"    },
-  { text: "INTEGRATION", sub: "Connected Systems"  },
-  { text: "INSIGHTS",    sub: "Actionable Data"    },
-  { text: "GROWTH",      sub: "Scalable Solutions" },
+  { text: "WEBSITES",    sub: "Modern & Mobile"    },
+  { text: "AUTOMATION",  sub: "Workflows Built to Scale" },
+  { text: "DASHBOARDS",  sub: "Live Visibility"    },
+  { text: "INTEGRATION", sub: "Connected Stack"    },
 ];
 
 // Label line anchor points (from cubes/midpoints toward the right)
@@ -184,7 +184,7 @@ export default function CubeVisualization() {
         role="img"
         aria-labelledby="cube-viz-title"
       >
-        <title id="cube-viz-title">Diagram of interconnected business systems: Automation, Integration, Insights, and Growth</title>
+        <title id="cube-viz-title">Diagram of interconnected H Four Systems services: Websites, Automation, Dashboards, and Integration</title>
         <defs>
           <radialGradient id="cg" cx="45%" cy="50%" r="55%">
             <stop offset="0%"   stopColor="#6FAFA6" stopOpacity="0.08" />

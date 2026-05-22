@@ -178,9 +178,8 @@ export default function CubeVisualization() {
         className="w-full h-full"
         style={{ overflow: "visible" }}
         role="img"
-        aria-labelledby="cube-viz-title"
+        aria-label="Diagram of interconnected H Four Systems services: Websites, Automation, Dashboards, and Integration"
       >
-        <title id="cube-viz-title">Diagram of interconnected H Four Systems services: Websites, Automation, Dashboards, and Integration</title>
         <defs>
           <radialGradient id="cg" cx="45%" cy="50%" r="55%">
             <stop offset="0%"   stopColor="#6FAFA6" stopOpacity="0.08" />

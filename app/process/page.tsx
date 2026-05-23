@@ -54,7 +54,7 @@ const phases = [
       "Documentation and operational runbooks",
     ],
     deliverable: "Live, production-ready systems",
-    duration: "4–12 weeks depending on scope",
+    duration: "3–6 weeks depending on scope",
   },
   {
     num: "04",
@@ -82,7 +82,7 @@ export default function ProcessPage() {
       <Navbar />
 
       {/* ── Hero ── */}
-      <section className="pt-36 pb-20 px-6">
+      <section className="pt-36 pb-10 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">
             Implementation Methodology
@@ -214,7 +214,7 @@ export default function ProcessPage() {
       </section>
 
       {/* ── Assessment CTA ── */}
-      <section className="pt-6 pb-24 px-6 bg-[#1A2333]">
+      <section className="pt-6 pb-10 px-6 bg-[#1A2333]">
         <div className="max-w-3xl mx-auto text-center">
           <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">
             Start the Process

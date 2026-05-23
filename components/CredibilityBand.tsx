@@ -37,9 +37,9 @@ export default function CredibilityBand() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="bg-[#1A2333] py-20 px-6 lg:px-10 border-t border-[#AEB7C2]/8">
+    <section className="bg-[#1A2333] pt-6 pb-10 px-6 lg:px-10 border-t border-[#AEB7C2]/8">
       <div ref={ref} className="max-w-6xl mx-auto">
-        <div className="relative overflow-hidden rounded-2xl bg-[#0B1220] border border-[#AEB7C2]/10 px-8 py-14 md:px-14 md:py-16">
+        <div className="relative overflow-hidden rounded-2xl bg-[#0B1220] border border-[#AEB7C2]/10 px-8 py-10 md:px-14 md:py-12">
 
           {/* Corner dot-grid decorations */}
           <div className="absolute top-8 right-8 hidden md:block">

@@ -160,7 +160,7 @@ function ValueCard({
 
 export default function ValueStrip() {
   return (
-    <section className="bg-[#1A2333] py-14 px-6 lg:px-10 border-t border-[#AEB7C2]/8">
+    <section className="bg-[#1A2333] pt-6 pb-10 px-6 lg:px-10 border-t border-[#AEB7C2]/8">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {values.map((item, i) => (

@@ -161,7 +161,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Trust Metrics ── */}
-      <section className="py-20 px-6 bg-[#1A2333]">
+      <section className="pt-6 pb-10 px-6 bg-[#1A2333]">
         <div className="max-w-6xl mx-auto">
           <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-8 text-center">
             By the Numbers
@@ -188,7 +188,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Methodology ── */}
-      <section className="py-24 px-6">
+      <section className="pt-6 pb-10 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12">
             <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-3">
@@ -219,7 +219,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Guiding Principles ── */}
-      <section className="py-16 px-6 bg-[#1A2333] border-t border-[#AEB7C2]/8">
+      <section className="pt-6 pb-10 px-6 bg-[#1A2333] border-t border-[#AEB7C2]/8">
         <div className="max-w-6xl mx-auto">
           <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-8">
             What We Stand For
@@ -242,7 +242,7 @@ export default function AboutPage() {
       {/* TODO: Add founder/background story section — to be written separately */}
 
       {/* ── CTA ── */}
-      <section className="py-24 px-6">
+      <section className="pt-6 pb-10 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">
             Work With Us

@@ -189,7 +189,7 @@ export default function ServicesPreview() {
   const headerInView = useInView(headerRef, { once: true, margin: "-80px" });
 
   return (
-    <section className="bg-[#0B1220] pt-20 pb-28 px-6 lg:px-10">
+    <section className="bg-[#0B1220] pt-10 pb-14 px-6 lg:px-10">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}

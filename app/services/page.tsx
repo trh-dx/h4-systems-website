@@ -314,7 +314,7 @@ export default function ServicesPage() {
       <ValueStrip />
 
       {/* ── Services Grid ── */}
-      <section className="bg-[#0B1220] pt-20 pb-16 px-6 lg:px-10">
+      <section className="bg-[#0B1220] pt-6 pb-10 px-6 lg:px-10">
         <div className="max-w-6xl mx-auto">
 
           {/* Section header */}
@@ -390,7 +390,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── Process Section ── */}
-      <section className="bg-[#1A2333] py-20 px-6 lg:px-10 border-t border-[#AEB7C2]/8">
+      <section className="bg-[#1A2333] pt-6 pb-10 px-6 lg:px-10 border-t border-[#AEB7C2]/8">
         <div className="max-w-6xl mx-auto">
 
           {/* Header */}
@@ -468,11 +468,11 @@ export default function ServicesPage() {
       </section>
 
       {/* ── CTA Section ── */}
-      <section className="bg-[#0B1220] py-24 px-6 lg:px-10">
+      <section className="bg-[#0B1220] pt-6 pb-10 px-6 lg:px-10">
         <div className="max-w-6xl mx-auto">
           <div
             className="relative overflow-hidden rounded-2xl bg-[#1A2333] border border-[#AEB7C2]/10
-                       px-8 py-16 md:px-14 text-center"
+                       px-8 py-10 md:px-14 text-center"
           >
             {/* Subtle radial glow behind the copy */}
             <div

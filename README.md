@@ -1,6 +1,6 @@
 # H Four Systems — Website
 
-Marketing and lead-generation website for H Four Systems, a small business technology consultancy specializing in website modernization, business automation, dashboards, and mobile-friendly design.
+Marketing and lead-generation website for H Four Systems, a small business technology consultancy specializing in website modernization, business automation, dashboards, and AI-assisted development.
 
 Built with Next.js (App Router), Tailwind CSS v4, and Framer Motion.
 
@@ -10,13 +10,13 @@ Built with Next.js (App Router), Tailwind CSS v4, and Framer Motion.
 
 | Route | Description |
 |---|---|
-| `/` | Homepage — hero, 4-card services grid, stats |
-| `/services` | Service cards with bullets, typical results, and CTAs |
+| `/` | Homepage — hero, value strip, services preview, credibility band |
+| `/services` | Services hero, value strip, 4-card grid, process timeline, CTA |
 | `/case-studies` | Featured and grid case studies |
 | `/industries` | 6 industry cards |
-| `/process` | 4-phase methodology |
-| `/about` | Positioning, trust metrics, values |
-| `/contact` | Assessment offer and contact form |
+| `/process` | 4-phase methodology (Discover, Strategize, Build, Optimize), Website Care Plan, assessment CTA |
+| `/about` | Positioning, "What Sets Us Apart" differentiators, trust metrics, methodology, guiding principles, CTA — personal story section pending |
+| `/contact` | Modernization Assessment offer (primary), assessment detail, contact form |
 
 ---
 
@@ -44,14 +44,16 @@ Built with Next.js (App Router), Tailwind CSS v4, and Framer Motion.
 
 **Font size conventions**
 - Navbar links, CTA buttons, and eyebrow labels: `text-[13px]`
-- Page hero h1s: `text-3xl sm:text-4xl md:text-5xl` — three-step scale, no jarring jumps on mobile
+- Homepage hero h1: `text-[clamp(52px,7vw,92px)]` — fluid scale
+- Services page hero h1: `text-[clamp(28px,4.5vw,56px)]`
+- Section headings: `text-[clamp(22px,3.5vw,36px)]`
 - Do not use `transition-all` — use specific properties (`transition-colors`, `transition-[border-color,box-shadow,transform]`, etc.)
 
 **Mobile-first responsive conventions**
-- All grids must collapse to `grid-cols-1` on xs before scaling up (e.g. `grid-cols-1 sm:grid-cols-2 lg:grid-cols-4`)
-- Multi-step horizontal flows (e.g. workflow diagrams) use `flex-col md:flex-row` — not `sm:flex-row` — to avoid overflow on 640px screens
+- All grids collapse to `grid-cols-1` on xs before scaling up (e.g. `grid-cols-1 sm:grid-cols-2 lg:grid-cols-4`)
+- Multi-step horizontal flows (e.g. process timeline) use `hidden lg:block` for desktop and a separate `lg:hidden` block for mobile
 - Eyebrow/label text must not use `whitespace-nowrap`; let it wrap on small screens
-- Gap utilities on 2-col grids should reduce on mobile: `gap-6 lg:gap-12`
+- Gap utilities on 2-col grids should reduce on mobile: `gap-5` at base
 
 ---
 
@@ -59,12 +61,29 @@ Built with Next.js (App Router), Tailwind CSS v4, and Framer Motion.
 
 | File | Description |
 |---|---|
-| `components/Navbar.tsx` | Fixed top navbar with logo, nav links, mobile menu |
-| `components/Hero.tsx` | Homepage hero — headline, CTA buttons, cube visual |
+| `components/Navbar.tsx` | Fixed top navbar with logo, nav links, mobile drawer |
+| `components/Hero.tsx` | Homepage hero — headline, body copy, CTA buttons, cube visualization |
 | `components/CubeVisualization.tsx` | Animated isometric cube SVG with network labels |
-| `components/ServicesGrid.tsx` | 4-card services section on homepage |
-| `components/StatsSection.tsx` | Trust metrics / stats bar |
+| `components/ValueStrip.tsx` | 4-card KPI strip (Faster Delivery, Conversion Design, Streamlined Ops, Scalability) — shared between homepage and services page |
+| `components/ServicesPreview.tsx` | Homepage services preview — clean 2×2 grid with Learn More links |
+| `components/CredibilityBand.tsx` | Homepage credibility section — "Enterprise Experience. SMB Focus." with trust bullets and CTA |
+| `components/ServicesGrid.tsx` | Detailed 4-card services section (kept; not currently on homepage or services page) |
+| `components/StatsSection.tsx` | Trust metrics / stats bar (kept; not currently on homepage) |
 | `components/Footer.tsx` | Site footer |
+
+---
+
+## Version Control
+
+Previous page versions are stored in `_versions/` before any code changes.
+
+| Version | Date | What's Preserved |
+|---|---|---|
+| `v1-2026-05-23` | 2026-05-23 | Original homepage, services, contact, process, and about pages |
+| `v2-2026-05-23` | 2026-05-23 | Phase 2 services page (before Additional Services cards were removed) |
+| `v3-2026-05-23` | 2026-05-23 | Process page with Care Plan (before review cleanup — timeline bar, Maturity Model, Guiding Principles removed; "Architect" renamed "Strategize") |
+
+To revert a file, copy it from the relevant `_versions/` subfolder back to its original path in the project root.
 
 ---
 
@@ -87,41 +106,46 @@ Puppeteer is installed locally. With the dev server running:
 
 ```bash
 node screenshot.mjs http://localhost:3000
-node screenshot.mjs http://localhost:3000 label   # saves as screenshot-N-label.png
+node screenshot.mjs http://localhost:3000/services label   # saves as screenshot-N-label.png
 ```
 
-Screenshots are saved to `./temporary screenshots/` and auto-incremented.
+Screenshots are saved to `./temporary screenshots/` and auto-incremented (never overwritten).
 
 ---
 
 ## Project Structure
 
 ```
-app/              — Next.js App Router pages
-components/       — Shared UI components
+app/
+  page.tsx              — Homepage
+  services/page.tsx     — Services page
+  about/page.tsx        — ⚠ Personal story section marked TODO (pending)
+  case-studies/page.tsx
+  contact/page.tsx
+  industries/page.tsx
+  process/page.tsx
+  layout.tsx
+
+components/
+  Navbar.tsx
+  Hero.tsx
+  CubeVisualization.tsx
+  ValueStrip.tsx         ← shared across homepage + services
+  ServicesPreview.tsx    ← homepage services section
+  CredibilityBand.tsx    ← homepage credibility section
+  ServicesGrid.tsx       ← detailed services cards (available, not currently on home)
+  StatsSection.tsx       ← stats bar (available, not currently on home)
+  Footer.tsx
+
 public/
-  brand_assets/   — Logos and brand images
-skills/           — H4 skill files (audit, copy, design, automation, etc.)
-orchestrator/     — Master routing logic for skill selection
+  brand_assets/          — Logo SVGs and brand images
+
+_versions/
+  README.md              — Version history table
+  v1-2026-05-23/         — Snapshot before Phase 2 homepage + services rebuild
+  v2-2026-05-23/         — Snapshot before Additional Services repositioning
+  v3-2026-05-23/         — Snapshot before Process page review cleanup
 ```
-
----
-
-## Skills
-
-H4 skill files guide Claude on how to handle specific types of requests.
-
-| File | Purpose |
-|---|---|
-| `skills/website-audit.md` | Analyze, score, and produce modernization recommendations |
-| `skills/conversion-copywriting.md` | Write and rewrite conversion-focused messaging |
-| `skills/design-system.md` | Enforce H4 design consistency across all projects |
-| `skills/technical-architecture.md` | Advise on stack, deployment, and Next.js conventions |
-| `skills/automation-planner.md` | Design practical automation workflows |
-| `skills/dashboard-strategy.md` | Plan KPI dashboards and operational reporting |
-| `skills/proposal-generator.md` | Generate scoped, priced, phased client proposals |
-
-The `orchestrator/h4-master-router.md` file determines which skill(s) to activate based on the request type.
 
 ---
 
@@ -130,5 +154,5 @@ The `orchestrator/h4-master-router.md` file determines which skill(s) to activat
 - [Next.js](https://nextjs.org) — App Router
 - [TypeScript](https://www.typescriptlang.org)
 - [Tailwind CSS](https://tailwindcss.com) — v4
-- [Framer Motion](https://www.framer.com/motion/) — animations
+- [Framer Motion](https://www.framer.com/motion/) — scroll-triggered and entrance animations
 - [Montserrat + Roboto Mono](https://fonts.google.com) — via next/font/google

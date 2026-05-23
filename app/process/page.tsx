@@ -4,8 +4,11 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Our Process — H Four Systems",
-  description: "A four-phase engagement model: Discover, Architect, Build, and Optimize. High-impact improvements delivered within weeks, not months.",
+  description:
+    "A four-phase engagement model: Discover, Strategize, Build, and Optimize. Structured enough to deliver reliably — flexible enough to fit your situation.",
 };
+
+// ── Data ───────────────────────────────────────────────────────────
 
 const phases = [
   {
@@ -25,24 +28,24 @@ const phases = [
   },
   {
     num: "02",
-    name: "Architect",
-    tagline: "Design a modernization strategy, not just a project plan.",
-    desc: "With a clear picture of the current state, we design the target architecture — what the modernized system will look like, how it will integrate with existing tools, and what the implementation sequence should be.",
+    name: "Strategize",
+    tagline: "Define the right approach before writing a single line of code.",
+    desc: "With a clear picture of the current state, we define the modernization strategy — what to build, in what order, and using what tools — and establish clear success criteria before any implementation begins.",
     activities: [
-      "Target-state systems architecture design",
-      "Technology stack selection and rationale",
+      "Modernization approach and solution design",
+      "Technology selection and rationale",
       "Integration and data flow mapping",
-      "Implementation phasing and dependency sequencing",
+      "Implementation phasing and priority sequencing",
       "Risk identification and mitigation planning",
     ],
-    deliverable: "Modernization Architecture Blueprint",
+    deliverable: "Modernization Strategy & Roadmap",
     duration: "1–2 weeks",
   },
   {
     num: "03",
     name: "Build",
     tagline: "Deliver working systems, not just recommendations.",
-    desc: "We build in structured sprints with clear milestones and regular check-ins. Every deliverable is tested in context of your real business operations — not just functional requirements.",
+    desc: "We build in structured sprints with clear milestones and regular check-ins. Every deliverable is tested in the context of your real business operations — not just against functional requirements.",
     activities: [
       "Sprint-based development with weekly deliverables",
       "Stakeholder review and feedback loops",
@@ -70,48 +73,7 @@ const phases = [
   },
 ];
 
-const maturityLevels = [
-  {
-    level: "Legacy",
-    label: "Before",
-    traits: ["Manual processes", "Disconnected tools", "No visibility", "Reactive operations"],
-    color: "border-[#AEB7C2]/20 bg-[#0B1220]",
-    labelColor: "text-[#AEB7C2]/50",
-  },
-  {
-    level: "Transitional",
-    label: "During",
-    traits: ["Systems mapped", "Architecture defined", "Automation staged", "Dashboards building"],
-    color: "border-[#6FAFA6]/20 bg-[#0B1220]",
-    labelColor: "text-[#6FAFA6]/70",
-  },
-  {
-    level: "Modern",
-    label: "After",
-    traits: ["Integrated systems", "Automated workflows", "Real-time visibility", "Proactive operations"],
-    color: "border-[#6FAFA6]/40 bg-[#6FAFA6]/5",
-    labelColor: "text-[#6FAFA6]",
-  },
-];
-
-const principles = [
-  {
-    title: "Outcomes over deliverables",
-    desc: "We measure success by operational improvement, not by whether we shipped a feature.",
-  },
-  {
-    title: "No unnecessary complexity",
-    desc: "Every recommendation has a clear business rationale. We don't introduce technology for its own sake.",
-  },
-  {
-    title: "Staged, sequenced delivery",
-    desc: "High-leverage improvements are delivered early. We don't make clients wait 12 weeks to see results.",
-  },
-  {
-    title: "Built to be maintained",
-    desc: "Every system we deliver is documented, supported, and designed to evolve as the business grows.",
-  },
-];
+// ── Page ───────────────────────────────────────────────────────────
 
 export default function ProcessPage() {
   return (
@@ -122,76 +84,65 @@ export default function ProcessPage() {
       {/* ── Hero ── */}
       <section className="pt-36 pb-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">Implementation Methodology</div>
+          <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">
+            Implementation Methodology
+          </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F4F7F9] leading-tight tracking-tight mb-6">
             A structured path from<br className="hidden sm:block" /> current state to modern operations.
           </h1>
           <p className="text-lg text-[#AEB7C2] leading-relaxed max-w-2xl">
-            Every engagement follows a consistent four-phase methodology. Structured enough to deliver reliably. Flexible enough to fit your specific situation.
+            Every engagement follows a consistent four-phase methodology. Structured enough
+            to deliver reliably. Flexible enough to fit your specific situation.
           </p>
         </div>
       </section>
 
-      {/* ── Timeline bar ── */}
-      <section className="pb-4 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="hidden md:flex items-center">
-            {phases.map((phase, i) => (
-              <div key={phase.num} className="flex items-center flex-1">
-                <div className="flex flex-col items-center flex-1">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 rounded-full bg-[#6FAFA6]/15 border border-[#6FAFA6]/40 flex items-center justify-center">
-                      <span className="text-[#6FAFA6] text-xs font-bold">{i + 1}</span>
-                    </div>
-                    <span className="text-[#F4F7F9] font-semibold text-sm">{phase.name}</span>
-                  </div>
-                  <div className="w-full h-0.5 bg-[#6FAFA6]/20 relative">
-                    <div className="absolute inset-y-0 left-0 w-full bg-[#6FAFA6]/40 rounded-full" />
-                  </div>
-                </div>
-                {i < phases.length - 1 && (
-                  <svg className="w-4 h-4 text-[#AEB7C2]/30 flex-shrink-0 mx-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── Phase Detail Cards ── */}
-      <section className="pb-24 px-6 pt-8">
+      <section className="pb-6 px-6">
         <div className="max-w-6xl mx-auto space-y-6">
           {phases.map((phase) => (
-            <div key={phase.num} className="bg-[#1A2333] border border-[#AEB7C2]/15 rounded-xl overflow-hidden">
+            <div
+              key={phase.num}
+              className="bg-[#1A2333] border border-[#AEB7C2]/15 rounded-xl overflow-hidden"
+            >
               {/* Phase header */}
               <div className="bg-[#0B1220] border-b border-[#AEB7C2]/10 px-8 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex items-center gap-5">
-                  <span className="text-[#6FAFA6] text-3xl font-bold font-mono tracking-tight">{phase.num}</span>
+                  <span className="text-[#6FAFA6] text-3xl font-bold font-mono tracking-tight">
+                    {phase.num}
+                  </span>
                   <div>
                     <div className="text-[#F4F7F9] font-bold text-xl">{phase.name}</div>
                     <div className="text-[#AEB7C2] text-sm">{phase.tagline}</div>
                   </div>
                 </div>
-                <div className="flex gap-6 text-right">
-                  <div>
-                    <div className="text-xs text-[#AEB7C2]/50 uppercase tracking-wider mb-0.5">Duration</div>
-                    <div className="text-[#F4F7F9] text-sm font-medium">{phase.duration}</div>
+                <div className="text-right shrink-0">
+                  <div className="text-xs text-[#AEB7C2]/50 uppercase tracking-wider mb-0.5">
+                    Duration
                   </div>
+                  <div className="text-[#F4F7F9] text-sm font-medium">{phase.duration}</div>
                 </div>
               </div>
 
               <div className="p-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Left: description + deliverable */}
                 <div>
                   <p className="text-[#AEB7C2] text-sm leading-relaxed mb-6">{phase.desc}</p>
                   <div className="bg-[#0B1220] border border-[#6FAFA6]/20 rounded-lg px-5 py-4">
-                    <div className="text-xs text-[#AEB7C2]/50 uppercase tracking-wider mb-1">Primary Deliverable</div>
-                    <div className="text-[#6FAFA6] font-semibold text-sm">{phase.deliverable}</div>
+                    <div className="text-xs text-[#AEB7C2]/50 uppercase tracking-wider mb-1">
+                      Primary Deliverable
+                    </div>
+                    <div className="text-[#6FAFA6] font-semibold text-sm">
+                      {phase.deliverable}
+                    </div>
                   </div>
                 </div>
+
+                {/* Right: activities */}
                 <div>
-                  <div className="text-xs font-semibold tracking-widest uppercase text-[#AEB7C2]/60 mb-4">Activities</div>
+                  <div className="text-xs font-semibold tracking-widest uppercase text-[#AEB7C2]/60 mb-4">
+                    Activities
+                  </div>
                   <ul className="space-y-3">
                     {phase.activities.map((act) => (
                       <li key={act} className="flex items-start gap-3 text-sm text-[#AEB7C2]">
@@ -209,67 +160,91 @@ export default function ProcessPage() {
         </div>
       </section>
 
-      {/* ── Maturity Model ── */}
-      <section className="py-24 px-6 bg-[#1A2333]">
+      {/* ── Website Care Plan ── */}
+      <section className="pt-6 pb-6 px-6 bg-[#0B1220]">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-12">
-            <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-3">Operational Maturity</div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#F4F7F9] mb-3">Where you are. Where you're going.</h2>
-            <p className="text-[#AEB7C2] max-w-xl">The modernization journey has three clear states. Most businesses we work with start in Legacy and reach Modern within one engagement cycle.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {maturityLevels.map((m) => (
-              <div key={m.level} className={`border rounded-xl p-8 ${m.color}`}>
-                <div className={`text-xs font-semibold tracking-widest uppercase mb-1 ${m.labelColor}`}>{m.label}</div>
-                <div className="text-[#F4F7F9] font-bold text-xl mb-6">{m.level}</div>
-                <ul className="space-y-3">
-                  {m.traits.map((t) => (
-                    <li key={t} className="flex items-center gap-2.5 text-sm text-[#AEB7C2]">
-                      <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${m.label === "After" ? "bg-[#6FAFA6]" : "bg-[#AEB7C2]/30"}`} />
-                      {t}
-                    </li>
-                  ))}
-                </ul>
+          <div className="bg-[#1A2333] border border-[#AEB7C2]/15 rounded-xl overflow-hidden">
+            {/* Header bar — matches phase card style */}
+            <div className="bg-[#0B1220] border-b border-[#AEB7C2]/10 px-8 py-5 flex items-center gap-5">
+              <div className="w-8 h-0.5 bg-[#6FAFA6] rounded-full" />
+              <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase">
+                After Launch
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* ── Principles ── */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-12">
-            <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-3">Guiding Principles</div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#F4F7F9]">How we approach every engagement.</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {principles.map((p) => (
-              <div key={p.title} className="bg-[#1A2333] border border-[#AEB7C2]/15 rounded-xl p-6">
-                <div className="w-8 h-0.5 bg-[#6FAFA6] mb-4 rounded-full" />
-                <h3 className="text-[#F4F7F9] font-semibold mb-3">{p.title}</h3>
-                <p className="text-[#AEB7C2] text-sm leading-relaxed">{p.desc}</p>
+            <div className="p-8 md:p-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+              {/* Left: copy */}
+              <div>
+                <h2 className="text-[#F4F7F9] font-bold text-2xl sm:text-3xl leading-tight mb-5">
+                  We Don&apos;t Disappear After Go-Live
+                </h2>
+                <p className="text-[#AEB7C2] text-sm leading-relaxed mb-8">
+                  Most projects don&apos;t end at launch — they evolve. Our Website Care Plan keeps
+                  your site and systems running, updated, and improving over time.
+                </p>
+                <a
+                  href="/contact"
+                  className="group inline-flex items-center gap-2 bg-[#6FAFA6] hover:bg-[#83BDB5]
+                             text-[#0B1220] font-semibold text-sm px-6 py-3 rounded-lg
+                             transition-colors duration-200"
+                >
+                  Ask About Our Care Plan
+                  <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
+                </a>
               </div>
-            ))}
+
+              {/* Right: three bullet points */}
+              <div className="space-y-4">
+                {[
+                  "Ongoing updates and content changes",
+                  "Bug fixes and integration monitoring",
+                  "Performance reviews and improvement recommendations",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#6FAFA6]/15 border border-[#6FAFA6]/30 flex items-center justify-center mt-0.5">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#6FAFA6]" />
+                    </div>
+                    <span className="text-[#AEB7C2] text-sm leading-relaxed">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── Assessment CTA ── */}
-      <section className="py-24 px-6 bg-[#1A2333]">
+      <section className="pt-6 pb-24 px-6 bg-[#1A2333]">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">Start the Process</div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#F4F7F9] mb-5">
+          <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">
+            Start the Process
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#F4F7F9] leading-tight tracking-tight mb-5">
             Ready to begin your modernization assessment?
           </h2>
           <p className="text-[#AEB7C2] leading-relaxed mb-10 max-w-xl mx-auto">
-            The first step is a structured discovery conversation — no commitment required. We'll map your current state and identify where the highest-leverage opportunities are.
+            The first step is a structured discovery conversation — no commitment required.
+            We&apos;ll map your current state and identify where the highest-leverage
+            opportunities are.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="inline-block bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-semibold px-8 py-4 rounded-lg transition-colors">
+            <a
+              href="/contact"
+              className="group inline-flex items-center justify-center gap-3 font-mono
+                         bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-bold
+                         text-[13px] tracking-[0.16em] uppercase px-8 py-4 rounded-md
+                         transition-colors duration-200"
+            >
               Schedule a Free Assessment
+              <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
             </a>
-            <a href="/services" className="inline-block border border-[#6FAFA6] hover:bg-[#6FAFA6]/10 text-[#6FAFA6] font-semibold px-8 py-4 rounded-lg transition-colors">
+            <a
+              href="/services"
+              className="inline-flex items-center justify-center font-mono border border-[#AEB7C2]/25
+                         hover:border-[#6FAFA6]/50 text-[#AEB7C2] hover:text-[#F4F7F9] font-bold
+                         text-[13px] tracking-[0.16em] uppercase px-8 py-4 rounded-md
+                         transition-colors duration-200"
+            >
               View Our Services
             </a>
           </div>

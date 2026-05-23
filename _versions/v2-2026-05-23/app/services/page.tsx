@@ -161,6 +161,11 @@ interface ServiceDef {
   bullets: string[];
 }
 
+interface AdditionalService {
+  title: string;
+  desc: string;
+}
+
 interface ProcessStep {
   num: string;
   title: string;
@@ -216,6 +221,21 @@ const mainServices: ServiceDef[] = [
       "Accelerated development workflows",
       "Practical AI-enabled delivery support",
     ],
+  },
+];
+
+const additionalServices: AdditionalService[] = [
+  {
+    title: "Cloud & Platform Solutions",
+    desc: "Scalable infrastructure and platform configurations optimized for performance and reliability.",
+  },
+  {
+    title: "Maintenance & Support",
+    desc: "Ongoing technical support, updates, and optimization to keep your systems running reliably.",
+  },
+  {
+    title: "Consulting & Digital Strategy",
+    desc: "Strategic guidance on modernization priorities, technology selection, and digital roadmaps.",
   },
 ];
 
@@ -332,7 +352,7 @@ export default function ServicesPage() {
           </div>
 
           {/* 2×2 main grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10">
             {mainServices.map(({ Icon, category, title, desc, bullets }) => (
               <div
                 key={title}
@@ -386,6 +406,32 @@ export default function ServicesPage() {
             ))}
           </div>
 
+          {/* Additional services — compact 3-col row */}
+          <div>
+            <p className="font-mono text-[#AEB7C2]/45 text-[11px] font-bold tracking-[0.28em] uppercase mb-4 mt-2">
+              Additional Services
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {additionalServices.map(({ title, desc }) => (
+                <div
+                  key={title}
+                  className="bg-[#1A2333]/60 border border-[#AEB7C2]/8 rounded-xl p-5
+                             hover:border-[#6FAFA6]/30 transition-colors duration-200"
+                >
+                  <h4 className="text-[#F4F7F9] font-semibold text-[14px] mb-2">{title}</h4>
+                  <p className="text-[#AEB7C2] text-[13px] leading-relaxed mb-4">{desc}</p>
+                  <a
+                    href="/contact"
+                    className="inline-flex items-center gap-1.5 font-mono text-[#6FAFA6] text-[10px]
+                               font-bold tracking-[0.2em] uppercase hover:gap-2.5 transition-[gap] duration-200"
+                  >
+                    <span>Get Started</span>
+                    <span>→</span>
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

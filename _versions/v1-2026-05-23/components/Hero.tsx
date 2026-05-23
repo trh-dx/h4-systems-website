@@ -71,7 +71,7 @@ export default function Hero() {
             variants={fadeUp}
             className="text-[#AEB7C2] text-[15px] leading-[1.75] max-w-[520px] mt-8 mb-10"
           >
-            We deliver modern websites, dashboards, and automation through AI-assisted development — built to launch faster, scale smarter, and create better customer experiences.
+            We deliver modern websites, dashboards, and automation through AI-assisted development. Designed to launch your solutions faster, scale smarter, and create better customer experiences.
           </motion.p>
 
           {/* CTA buttons */}

@@ -61,12 +61,12 @@ export default function ContactPage() {
       {/* ── Hero ── */}
       <section className="pt-36 pb-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">Free Assessment</div>
+          <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">Business Modernization Assessment</div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F4F7F9] leading-tight tracking-tight mb-6">
-            Start with a Modernization Assessment
+            Understand your modernization opportunity. At no cost.
           </h1>
           <p className="text-lg text-[#AEB7C2] leading-relaxed max-w-2xl">
-            Not sure where to start? We review your current website, workflows, and tools — and deliver a clear picture of what&apos;s worth fixing first, in what order, and roughly what it should cost. No commitment required.
+            Every engagement begins with a structured assessment. We map where your business is today, identify where the highest-leverage opportunities are, and define a practical path forward — before any commitment is made.
           </p>
         </div>
       </section>

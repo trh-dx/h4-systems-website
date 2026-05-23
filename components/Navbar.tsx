@@ -8,7 +8,7 @@ const navLinks = [
   { label: "ABOUT", href: "/about" },
   { label: "PROCESS", href: "/process" },
   { label: "OUR WORK", href: "/case-studies" },
-  { label: "RESOURCES", href: "#" },
+  { label: "RESOURCES", href: "/resources" },
 ];
 
 function H4Logo() {

@@ -17,23 +17,20 @@ const trustMetrics = [
   { stat: "11 wks", label: "Avg. Time to Modern",            sub: "Discovery through delivery"        },
 ];
 
-const differentiators = [
-  {
-    title: "Enterprise thinking at SMB scale",
-    desc: "20+ years of enterprise IT and systems delivery — applied practically, without the overhead or cost of a large consulting firm.",
-  },
-  {
-    title: "We work with owners, not IT departments",
-    desc: "Most of our clients are business owners and operators who need results, not reports. We communicate in business terms.",
-  },
-  {
-    title: "Measured by operational outcomes",
-    desc: "Success is defined before we build anything. If the work doesn't deliver a measurable operational improvement, something went wrong.",
-  },
-  {
-    title: "No vendor agenda",
-    desc: "We don't sell software. We recommend and build what solves your specific problem — using the best tool for the job, not the one we profit from.",
-  },
+const isPoints = [
+  "A website modernization partner",
+  "A simple automation and workflow partner",
+  "A lead capture and follow-up improvement partner",
+  "A dashboard and business visibility partner",
+  "A practical technology partner for small businesses",
+];
+
+const isNotPoints = [
+  "Not a generic web design shop",
+  "Not a staffing firm",
+  "Not a bloated consulting company",
+  "Not a software vendor pushing tools you do not need",
+  "Not an AI hype company",
 ];
 
 const methodology = [
@@ -70,12 +67,6 @@ const principles = [
   },
 ];
 
-const positioningPoints = [
-  "A modernization partner — not a web agency, staffing firm, or software vendor.",
-  "We operate where business operations and technology execution meet.",
-  "Engagements are structured, measurable, and built around business outcomes.",
-  "We work with business owners and operators, not just IT departments.",
-];
 
 // ── Page ───────────────────────────────────────────────────────────
 
@@ -105,23 +96,40 @@ export default function AboutPage() {
       </section>
 
       {/* ── Positioning ── */}
-      <section className="pb-24 px-6">
+      <section className="pb-10 px-6">
         <div className="max-w-6xl mx-auto">
+
+          {/* Full-width heading + intro */}
+          <div className="mb-10">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#F4F7F9] mb-5">
+              What H4 Systems Is — and What We Are Not
+            </h2>
+            <p className="text-[#AEB7C2] leading-relaxed max-w-2xl">
+              H4 Systems exists to help small businesses improve the digital parts of their
+              business that customers and owners feel every day — the website, the contact
+              process, the follow-up workflow, the reporting, and the tools behind the scenes.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start">
 
-            {/* Left: what we are */}
+            {/* Left: What H4 Systems Is */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#F4F7F9] mb-6">
-                What we are — and what we are not.
-              </h2>
-              <p className="text-[#AEB7C2] leading-relaxed mb-8">
-                Most technology firms position themselves as either a software company, a web
-                agency, or an IT consultancy. H Four Systems sits in a different category:
-                operational modernization. We combine strategic assessment, systems architecture,
-                and execution to deliver measurable operational improvement.
+              <h3 className="text-xl font-bold text-[#F4F7F9] mb-5">
+                What H4 Systems Is
+              </h3>
+              <p className="text-[#AEB7C2] text-sm leading-relaxed mb-4">
+                H4 Systems is a practical modernization partner for small businesses. We help
+                improve the parts of your business that are outdated, manual, scattered, or
+                harder to manage than they should be.
+              </p>
+              <p className="text-[#AEB7C2] text-sm leading-relaxed mb-8">
+                We focus on useful improvements like better websites, stronger lead capture,
+                faster follow-up, simple automations, dashboards, and connected tools that
+                make the business easier to run.
               </p>
               <ul className="space-y-4">
-                {positioningPoints.map((pt) => (
+                {isPoints.map((pt) => (
                   <li
                     key={pt}
                     className="flex items-start gap-3 text-sm text-[#AEB7C2] leading-relaxed"
@@ -135,28 +143,39 @@ export default function AboutPage() {
               </ul>
             </div>
 
-            {/* Right: what sets us apart */}
+            {/* Right: What H4 Systems Is Not */}
             <div className="bg-[#1A2333] border border-[#AEB7C2]/15 rounded-xl p-8">
-              <div className="text-xs font-semibold tracking-widest uppercase text-[#AEB7C2]/60 mb-6">
-                What Sets Us Apart
-              </div>
-              <div className="space-y-0">
-                {differentiators.map((d) => (
-                  <div
-                    key={d.title}
-                    className="flex gap-4 py-5 border-b border-[#AEB7C2]/10 last:border-0"
+              <h3 className="text-xl font-bold text-[#F4F7F9] mb-5">
+                What H4 Systems Is Not
+              </h3>
+              <p className="text-[#AEB7C2] text-sm leading-relaxed mb-8">
+                H4 Systems is not here to sell unnecessary software, overcomplicate your
+                operations, or hand you a strategy document with no execution. We focus on
+                practical improvements that solve real problems and make sense for your business.
+              </p>
+              <ul className="space-y-4">
+                {isNotPoints.map((pt) => (
+                  <li
+                    key={pt}
+                    className="flex items-start gap-3 text-sm text-[#AEB7C2] leading-relaxed"
                   >
-                    <div className="flex-shrink-0 w-0.5 bg-[#6FAFA6] rounded-full self-stretch opacity-70" />
-                    <div>
-                      <div className="text-[#F4F7F9] font-semibold text-sm mb-1">{d.title}</div>
-                      <div className="text-[#AEB7C2] text-xs leading-relaxed">{d.desc}</div>
+                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#6FAFA6]/15 border border-[#6FAFA6]/30 flex items-center justify-center mt-0.5">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#6FAFA6]" />
                     </div>
-                  </div>
+                    {pt}
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
 
           </div>
+
+          {/* Closing line */}
+          <p className="mt-10 pt-8 border-t border-[#AEB7C2]/10 text-[#AEB7C2] text-sm leading-relaxed">
+            The goal is simple: help your business look better, respond faster, stay organized,
+            and grow without adding more manual work.
+          </p>
+
         </div>
       </section>
 

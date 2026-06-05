@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Our Work — H Four Systems",
   description:
-    "H4 Systems solves four categories of operational problems: website modernization, workflow automation, reporting and visibility, and systems integration.",
+    "See the types of problems H4 Systems helps small businesses solve — outdated websites, missed leads, scattered follow-up, manual tracking, and lack of visibility.",
 };
 
 // ── Data ───────────────────────────────────────────────────────────
@@ -13,39 +13,47 @@ export const metadata: Metadata = {
 const scenarios = [
   {
     tag: "Website Modernization",
-    industry: "Service Business & Professional Services",
+    industry: "Service businesses, contractors, professional services",
+    title: "From outdated website to professional online presence",
     problem:
-      "A website built years ago — static, slow, and not generating leads. No clear calls to action, no integrated contact capture, and zero visibility into how visitors engage. The business has grown, but the website still looks like day one.",
+      "The business has an older website that does not look modern, is hard to use on mobile, and does not clearly guide visitors to contact the company.",
     approach:
-      "Rebuild with conversion-focused design, a clear offer hierarchy, and lead capture connected directly to the owner's workflow — so no inquiry falls through the cracks.",
-    shift: "The website becomes an active lead generation asset, not a passive brochure.",
+      "Rebuild the website with a cleaner design, mobile-friendly pages, stronger calls-to-action, and clearer service information.",
+    shift:
+      "Customers can understand the business faster, contact the company more easily, and feel more confident before reaching out.",
   },
   {
-    tag: "Workflow & Process Automation",
-    industry: "Field Services, Trades & HVAC",
+    tag: "Lead Capture & Follow-up",
+    industry: "Any business with a contact form or website",
+    title: "From missed inquiries to better lead capture",
     problem:
-      "Scheduling done by phone. Work orders on paper. Invoicing running on a two-week lag. The owner spends 10+ hours a week on operational coordination that could be systematized.",
+      "Customer requests come through different places — contact forms, emails, phone calls, and text messages — making it easy for leads to get missed.",
     approach:
-      "Map the end-to-end workflow, identify the highest-leverage automation points, and build a connected system that handles scheduling, job status, and billing without the manual overhead.",
-    shift: "Owner time freed. Team clarity improved. Billing cycle compressed.",
+      "Create clearer contact forms, route submissions to the right place, and add simple tracking so new inquiries are easier to follow up on.",
+    shift:
+      "Leads become easier to see, easier to respond to, and less likely to fall through the cracks.",
+  },
+  {
+    tag: "Workflow & Process",
+    industry: "Trades, HVAC, field services, contractors",
+    title: "From scattered follow-up to simple workflow",
+    problem:
+      "The business relies on memory, sticky notes, inboxes, or spreadsheets to remember who needs a response and what needs to happen next.",
+    approach:
+      "Set up simple follow-up steps, reminders, notifications, or spreadsheet and CRM updates so the process is easier to manage.",
+    shift:
+      "The owner and team have a clearer way to track requests, follow up faster, and reduce manual chasing.",
   },
   {
     tag: "Reporting & Visibility",
-    industry: "Multi-Location Operations & Management",
+    industry: "Any business using spreadsheets to track activity",
+    title: "From manual reporting to better visibility",
     problem:
-      "Performance data scattered across three systems. Monthly reporting takes a full day to assemble in Excel. Decisions made on gut feel because real numbers are always 30 days behind.",
+      "Important information is spread across forms, spreadsheets, emails, and tools, making it hard to see what is happening in the business.",
     approach:
-      "Connect the data sources, build a live operational dashboard around the KPIs that drive real decisions, and automate data aggregation so reporting is always current.",
-    shift: "Real-time operational visibility. Monthly reporting effort collapses from a day to a glance.",
-  },
-  {
-    tag: "Systems Integration",
-    industry: "Mortgage, Finance & Professional Services",
-    problem:
-      "CRM, website, email, and billing are completely disconnected. Every handoff is manual re-entry. Data lives in silos and errors compound at every transition.",
-    approach:
-      "Map all integration points, connect systems via API or workflow middleware, and replace the manual re-entry that creates delays and errors with automated data flow.",
-    shift: "One source of truth. Manual handoffs eliminated. Errors traced back to their source.",
+      "Create simple dashboards or reporting views that bring key information into one place.",
+    shift:
+      "The business can better understand leads, activity, follow-up, and trends without digging through multiple systems.",
   },
 ];
 
@@ -64,62 +72,75 @@ export default function CaseStudiesPage() {
             Our Work
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F4F7F9] leading-tight tracking-tight mb-6">
-            The kinds of problems<br className="hidden sm:block" /> we&apos;re built to solve.
+            See how outdated websites and manual processes can become better business systems.
           </h1>
           <p className="text-lg text-[#AEB7C2] leading-relaxed max-w-2xl">
-            H4 Systems works across four operational problem categories — from outdated websites
-            that don&apos;t generate leads, to disconnected systems that slow your team down.
-            Here&apos;s what that work looks like in practice.
+            These examples show the types of problems H4 Systems helps solve — lost website
+            leads, scattered follow-up, manual reporting, disconnected tools, and day-to-day
+            work that depends too much on memory, text messages, and spreadsheets.
           </p>
         </div>
       </section>
 
       {/* ── Scenario Cards ── */}
       <section className="pt-6 pb-10 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-5">
-          {scenarios.map((s) => (
-            <div
-              key={s.tag}
-              className="bg-[#1A2333] border border-[#AEB7C2]/15 rounded-xl overflow-hidden
-                         hover:border-[#6FAFA6]/30 transition-colors duration-200"
-            >
-              {/* Card header */}
-              <div className="bg-[#0B1220] border-b border-[#AEB7C2]/10 px-6 py-4 flex items-center justify-between gap-3">
-                <span className="text-xs font-semibold tracking-widest uppercase text-[#6FAFA6] bg-[#6FAFA6]/10 border border-[#6FAFA6]/20 px-3 py-1 rounded-full">
-                  {s.tag}
-                </span>
-                <span className="text-xs text-[#AEB7C2]/50 text-right">{s.industry}</span>
+        <div className="max-w-6xl mx-auto">
+
+          {/* Section intro */}
+          <p className="text-[#AEB7C2] text-sm leading-relaxed mb-6 max-w-2xl">
+            Practical examples of how H4 Systems helps small businesses look better, respond faster, and stay organized.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {scenarios.map((s) => (
+              <div
+                key={s.tag}
+                className="bg-[#1A2333] border border-[#AEB7C2]/15 rounded-xl overflow-hidden
+                           hover:border-[#6FAFA6]/30 transition-colors duration-200"
+              >
+                {/* Card header */}
+                <div className="bg-[#0B1220] border-b border-[#AEB7C2]/10 px-6 py-4 flex items-center justify-between gap-3">
+                  <span className="text-xs font-semibold tracking-widest uppercase text-[#6FAFA6] bg-[#6FAFA6]/10 border border-[#6FAFA6]/20 px-3 py-1 rounded-full">
+                    {s.tag}
+                  </span>
+                  <span className="text-xs text-[#AEB7C2]/50 text-right hidden sm:block">{s.industry}</span>
+                </div>
+
+                <div className="p-7 flex flex-col gap-5">
+                  {/* Title */}
+                  <h3 className="text-[#F4F7F9] font-bold text-[15px] leading-snug tracking-tight">
+                    {s.title}
+                  </h3>
+
+                  {/* Problem */}
+                  <div>
+                    <div className="text-xs font-semibold tracking-widest uppercase text-[#AEB7C2]/50 mb-2">
+                      The Problem
+                    </div>
+                    <p className="text-[#AEB7C2] text-sm leading-relaxed">{s.problem}</p>
+                  </div>
+
+                  {/* Approach */}
+                  <div>
+                    <div className="text-xs font-semibold tracking-widest uppercase text-[#AEB7C2]/50 mb-2">
+                      H4 Solution
+                    </div>
+                    <p className="text-[#AEB7C2] text-sm leading-relaxed">{s.approach}</p>
+                  </div>
+
+                  {/* Impact */}
+                  <div className="bg-[#0B1220] border border-[#6FAFA6]/20 rounded-lg px-5 py-4 mt-auto">
+                    <div className="text-xs text-[#AEB7C2]/50 uppercase tracking-wider mb-1">
+                      Business Impact
+                    </div>
+                    <div className="text-[#6FAFA6] font-semibold text-sm leading-snug">
+                      {s.shift}
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              <div className="p-7 flex flex-col gap-5">
-                {/* Problem */}
-                <div>
-                  <div className="text-xs font-semibold tracking-widest uppercase text-[#AEB7C2]/50 mb-2">
-                    The Problem
-                  </div>
-                  <p className="text-[#AEB7C2] text-sm leading-relaxed">{s.problem}</p>
-                </div>
-
-                {/* Approach */}
-                <div>
-                  <div className="text-xs font-semibold tracking-widest uppercase text-[#AEB7C2]/50 mb-2">
-                    Our Approach
-                  </div>
-                  <p className="text-[#AEB7C2] text-sm leading-relaxed">{s.approach}</p>
-                </div>
-
-                {/* Shift */}
-                <div className="bg-[#0B1220] border border-[#6FAFA6]/20 rounded-lg px-5 py-4 mt-auto">
-                  <div className="text-xs text-[#AEB7C2]/50 uppercase tracking-wider mb-1">
-                    What Changes
-                  </div>
-                  <div className="text-[#6FAFA6] font-semibold text-sm leading-snug">
-                    {s.shift}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
@@ -131,11 +152,12 @@ export default function CaseStudiesPage() {
               Website Modernization
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#F4F7F9] mb-3">
-              What a modernization actually looks like.
+              Example: older website vs. a cleaner, more helpful one.
             </h2>
             <p className="text-[#AEB7C2] max-w-xl text-sm leading-relaxed">
-              Most small business websites were built to exist, not to convert. Here&apos;s
-              the difference between a passive online presence and one that works.
+              Many small business websites were built years ago and have not kept up. A
+              simple rebuild can make it much easier for customers to understand what
+              you do and how to reach you.
             </p>
           </div>
 
@@ -284,11 +306,12 @@ export default function CaseStudiesPage() {
               Lead Capture
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#F4F7F9] mb-3">
-              From lost inquiries to a tracked pipeline.
+              Example: leads buried in email vs. a simple way to track them.
             </h2>
             <p className="text-[#AEB7C2] max-w-xl text-sm leading-relaxed">
-              A contact form that emails a generic inbox isn&apos;t lead capture — it&apos;s
-              a hope. Here&apos;s what integrated lead capture actually looks like.
+              When inquiries land in a shared inbox mixed with newsletters and notifications,
+              it is easy to miss them. Adding simple routing and tracking helps make sure
+              every lead gets a follow-up.
             </p>
           </div>
 
@@ -448,14 +471,15 @@ export default function CaseStudiesPage() {
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
             <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-3">
-              Operational Visibility
+              Reporting & Visibility
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#F4F7F9] mb-3">
-              From spreadsheets to live dashboards.
+              Example: tracking everything in a spreadsheet vs. seeing it in one place.
             </h2>
             <p className="text-[#AEB7C2] max-w-xl text-sm leading-relaxed">
-              Most businesses are making decisions on data that&apos;s days or weeks old,
-              assembled by hand. Here&apos;s what it looks like when that changes.
+              Spreadsheets work until they get complicated. A simple dashboard can pull
+              the same information together so it is easier to see what is happening
+              without spending time pulling it manually.
             </p>
           </div>
 
@@ -636,14 +660,15 @@ export default function CaseStudiesPage() {
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
             <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-3">
-              Workflow & Automation
+              Workflow & Follow-up
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#F4F7F9] mb-3">
-              From group chat chaos to automated dispatch.
+              Example: coordinating jobs over group text vs. a simple dispatch view.
             </h2>
             <p className="text-[#AEB7C2] max-w-xl text-sm leading-relaxed">
-              For most field service businesses, job coordination happens in a group text.
-              It works — until it doesn&apos;t. Here&apos;s what systematized looks like.
+              Many field service businesses coordinate work through group texts and phone
+              calls. It works until something falls through. Adding a simple structured
+              view makes it easier to track who is doing what and when.
             </p>
           </div>
 
@@ -808,26 +833,26 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* ── Assessment CTA ── */}
+      {/* ── CTA ── */}
       <section className="pt-6 pb-10 px-6 bg-[#1A2333]">
         <div className="max-w-6xl mx-auto">
           <div className="bg-[#0B1220] border border-[#AEB7C2]/15 rounded-xl overflow-hidden">
             <div className="bg-[#1A2333] border-b border-[#AEB7C2]/10 px-8 py-5 flex items-center gap-5">
               <div className="w-8 h-0.5 bg-[#6FAFA6] rounded-full" />
               <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase">
-                Free Assessment
+                Get Started
               </div>
             </div>
             <div className="p-8 md:p-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div>
                 <h2 className="text-[#F4F7F9] font-bold text-2xl sm:text-3xl leading-tight mb-5">
-                  See which of these applies to your business.
+                  Not sure what your business needs first?
                 </h2>
                 <p className="text-[#AEB7C2] text-sm leading-relaxed mb-8">
-                  In a free 90-minute assessment, we&apos;ll map your current state across
-                  each of these categories — website, lead capture, operations, and reporting —
-                  and identify where the highest-leverage improvements are. No commitment, no
-                  sales pitch. Just a clear picture of where you are and what&apos;s worth fixing first.
+                  Start with a free website and workflow audit. H4 Systems will review your
+                  website, lead capture, follow-up process, and tools to identify what is
+                  working, what is slowing you down, and what improvements would make the
+                  biggest difference.
                 </p>
                 <a
                   href="/contact"
@@ -836,16 +861,16 @@ export default function CaseStudiesPage() {
                              text-[13px] tracking-[0.16em] uppercase px-8 py-4 rounded-md
                              transition-colors duration-200"
                 >
-                  Schedule a Free Assessment
+                  Request a Free Website &amp; Workflow Audit
                   <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
                 </a>
               </div>
               <div className="space-y-4">
                 {[
-                  "Website & lead capture review",
-                  "Workflow and manual process audit",
-                  "Reporting and visibility gap analysis",
-                  "Prioritized modernization roadmap — delivered in writing",
+                  "Review your current website and customer experience",
+                  "Look at how leads and inquiries are currently tracked",
+                  "Understand your follow-up process and tools",
+                  "Identify what is working and what is worth improving first",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#6FAFA6]/15 border border-[#6FAFA6]/30 flex items-center justify-center mt-0.5">

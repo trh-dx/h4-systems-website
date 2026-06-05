@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import ValueStrip from "@/components/ValueStrip";
+import HomepageValues from "@/components/HomepageValues";
 import ServicesPreview from "@/components/ServicesPreview";
 import CredibilityBand from "@/components/CredibilityBand";
 import Footer from "@/components/Footer";
@@ -10,7 +10,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#0B1220]">
       <Navbar />
       <Hero />
-      <ValueStrip />
+      <HomepageValues />
       <ServicesPreview />
       <CredibilityBand />
       <Footer />

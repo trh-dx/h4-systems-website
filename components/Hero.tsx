@@ -21,6 +21,13 @@ const fadeUp: Variants = {
   },
 };
 
+const bullets = [
+  "Replace outdated websites",
+  "Capture more leads",
+  "Automate simple follow-up",
+  "See activity in one place",
+];
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#0B1220]">
@@ -46,50 +53,79 @@ export default function Hero() {
           {/* Eyebrow */}
           <motion.p
             variants={fadeUp}
-            className="font-mono text-[#6FAFA6] text-[13px] font-bold tracking-[0.28em] uppercase mb-8 sm:whitespace-nowrap"
+            className="font-mono text-[#6FAFA6] text-[12px] font-bold tracking-[0.22em] uppercase mb-6"
           >
-            Modern Solutions.&nbsp; Intelligent Systems.&nbsp; Real Results.
+            Business Website &amp; Workflow Modernization
           </motion.p>
 
-          {/* Headline */}
+          {/* Main headline */}
           <motion.div variants={fadeUp}>
-            <h1 className="font-black uppercase leading-[0.88] tracking-tight">
-              <span className="block text-[clamp(52px,7vw,92px)] text-[#F4F7F9]">
-                Modernize.
+            <h1 className="font-black leading-[1.05] tracking-tight mb-5">
+              <span className="block text-[clamp(30px,4vw,54px)] text-[#F4F7F9]">
+                Modern Websites.
               </span>
-              <span className="block text-[clamp(52px,7vw,92px)] text-[#F4F7F9]">
-                Automate.
+              <span className="block text-[clamp(30px,4vw,54px)] text-[#F4F7F9]">
+                Smarter Follow-Up.
               </span>
-              <span className="block text-[clamp(52px,7vw,92px)] text-[#6FAFA6]">
-                Elevate.
+              <span className="block text-[clamp(30px,4vw,54px)] text-[#F4F7F9]">
+                Better Visibility.
               </span>
             </h1>
+          </motion.div>
+
+          {/* Brand accent line — present but subordinate */}
+          <motion.div variants={fadeUp} className="flex items-center gap-3 mb-7">
+            <div className="w-5 h-px bg-[#6FAFA6] rounded-full flex-shrink-0" />
+            <span className="font-mono text-[#6FAFA6] text-[11px] font-bold tracking-[0.26em] uppercase">
+              Modernize. Automate. Elevate.
+            </span>
           </motion.div>
 
           {/* Body copy */}
           <motion.p
             variants={fadeUp}
-            className="text-[#AEB7C2] text-[15px] leading-[1.75] max-w-[520px] mt-8 mb-10"
+            className="text-[#AEB7C2] text-[15px] leading-[1.75] max-w-[520px] mb-7"
           >
-            We deliver modern websites, dashboards, and automation through AI-assisted development — built to launch faster, scale smarter, and create better customer experiences.
+            H4 Systems helps businesses build new and replace outdated websites
+            and manual processes with clean, mobile-friendly websites, simple
+            automations, and practical dashboards that help you capture leads,
+            follow up faster, and see what&apos;s happening in your business.
           </motion.p>
+
+          {/* Supporting bullets */}
+          <motion.div
+            variants={fadeUp}
+            className="grid grid-cols-2 gap-x-6 gap-y-3 mb-9 max-w-[420px]"
+          >
+            {bullets.map((bullet) => (
+              <div key={bullet} className="flex items-center gap-2.5">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#6FAFA6] flex-shrink-0" />
+                <span className="text-[#AEB7C2] text-[13px] leading-snug">{bullet}</span>
+              </div>
+            ))}
+          </motion.div>
 
           {/* CTA buttons */}
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4">
             <a
               href="/contact"
-              className="group inline-flex items-center justify-center gap-3 font-mono bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-bold text-[13px] tracking-[0.16em] uppercase px-8 py-4 rounded-md transition-colors duration-200"
+              className="group inline-flex items-center justify-center gap-3 font-mono
+                         bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-bold
+                         text-[13px] tracking-[0.16em] uppercase px-8 py-4 rounded-md
+                         transition-colors duration-200"
             >
-              Let&apos;s Transform
-              <span className="transition-transform duration-200 group-hover:translate-x-1">
-                →
-              </span>
+              Request a Free Website Audit
+              <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
             </a>
             <a
-              href="/services"
-              className="inline-flex items-center justify-center font-mono border border-[#AEB7C2]/25 hover:border-[#6FAFA6]/50 text-[#AEB7C2] hover:text-[#F4F7F9] font-bold text-[13px] tracking-[0.16em] uppercase px-8 py-4 rounded-md transition-colors duration-200"
+              href="/case-studies"
+              className="inline-flex items-center justify-center font-mono
+                         border border-[#AEB7C2]/25 hover:border-[#6FAFA6]/50
+                         text-[#AEB7C2] hover:text-[#F4F7F9] font-bold
+                         text-[13px] tracking-[0.16em] uppercase px-8 py-4 rounded-md
+                         transition-colors duration-200"
             >
-              Explore Services
+              See What We Build
             </a>
           </motion.div>
         </motion.div>

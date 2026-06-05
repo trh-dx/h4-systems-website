@@ -204,11 +204,12 @@ export default function ServicesPreview() {
             What We Build
           </p>
           <h2 className="text-[#F4F7F9] font-bold text-[clamp(24px,3.5vw,36px)] leading-tight tracking-tight mb-4">
-            Modern systems for businesses ready to grow
+            Practical digital tools that help small businesses look better, respond faster, and stay organized.
           </h2>
           <p className="text-[#AEB7C2] text-[15px] leading-relaxed">
-            From your first website to integrated automation and live dashboards — H4 Systems
-            delivers practical digital solutions that scale with your business.
+            H4 Systems builds modern websites, lead capture workflows, simple automations, and business
+            visibility tools for companies that have outgrown scattered emails, outdated websites, manual
+            tracking, and disconnected systems.
           </p>
         </motion.div>
 

@@ -277,7 +277,7 @@ export default function ServicesPage() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-10 pt-44 pb-16">
           <p className="font-mono text-[#6FAFA6] text-[12px] font-bold tracking-[0.28em] uppercase mb-7">
-            Business Transformation Services
+            Services
           </p>
           <h1 className="font-black leading-tight tracking-tight mb-7">
             <span className="block text-[clamp(28px,4.5vw,56px)] text-[#F4F7F9]">Modern websites.</span>

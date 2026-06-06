@@ -33,23 +33,24 @@ const whatYouGet = [
 ];
 
 const industries = [
-  "Mortgage & Finance",
-  "HVAC & Field Services",
-  "Sanitation & Waste",
-  "Ranch & Agriculture",
-  "Mid-Market Operations",
-  "Service Business",
+  "HVAC / Home Services",
+  "Mortgage / Real Estate",
+  "Medical / Dental",
+  "Legal / Professional Services",
+  "Retail / Local Business",
+  "Construction / Trades",
+  "Ranch / Agriculture",
   "Other",
 ];
 
 const challenges = [
-  "Manual processes slowing the team down",
-  "Disconnected systems with no unified view",
-  "Website not generating leads",
-  "No real-time operational visibility",
-  "Slow reporting and data access",
-  "Preparing for growth or scale",
-  "Other / Not sure yet",
+  "My website is outdated",
+  "My website is not mobile-friendly",
+  "I need more leads",
+  "I need better follow-up",
+  "I need help with automation",
+  "I need better visibility / dashboards",
+  "I'm not sure yet",
 ];
 
 export default function ContactPage() {
@@ -63,10 +64,10 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-[#6FAFA6] text-xs font-semibold tracking-widest uppercase mb-4">Free Assessment</div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F4F7F9] leading-tight tracking-tight mb-6">
-            Start with a Modernization Assessment
+            Request Your Free Website Assessment
           </h1>
           <p className="text-lg text-[#AEB7C2] leading-relaxed max-w-2xl">
-            Not sure where to start? We review your current website, workflows, and tools — and deliver a clear picture of what&apos;s worth fixing first, in what order, and roughly what it should cost. No commitment required.
+            Tell us a little about your business. We&apos;ll review your website and follow up within one business day with next steps.
           </p>
         </div>
       </section>
@@ -116,10 +117,12 @@ export default function ContactPage() {
 
             {/* Right: Contact form */}
             <div className="bg-[#1A2333] border border-[#AEB7C2]/15 rounded-xl p-8">
-              <div className="text-[#F4F7F9] font-bold text-xl mb-2">Request Your Assessment</div>
-              <p className="text-[#AEB7C2] text-sm mb-8">We'll follow up within one business day to confirm a time that works.</p>
+              <div className="text-[#F4F7F9] font-bold text-xl mb-2">Your Information</div>
+              <p className="text-[#AEB7C2] text-sm mb-8">No commitment required. We&apos;ll follow up within one business day.</p>
 
               <form className="space-y-5">
+
+                {/* First + Last name — side by side on desktop */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-xs font-semibold text-[#AEB7C2] uppercase tracking-wider mb-2">
@@ -143,17 +146,31 @@ export default function ContactPage() {
                   </div>
                 </div>
 
+                {/* Company Name */}
                 <div>
                   <label className="block text-xs font-semibold text-[#AEB7C2] uppercase tracking-wider mb-2">
                     Company Name
                   </label>
                   <input
                     type="text"
-                    placeholder="Acme Operations LLC"
+                    placeholder="Acme Services LLC"
                     className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#6FAFA6]/60 transition-colors"
                   />
                 </div>
 
+                {/* Website URL */}
+                <div>
+                  <label className="block text-xs font-semibold text-[#AEB7C2] uppercase tracking-wider mb-2">
+                    Website URL
+                  </label>
+                  <input
+                    type="url"
+                    placeholder="https://yourcompany.com"
+                    className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#6FAFA6]/60 transition-colors"
+                  />
+                </div>
+
+                {/* Business Email */}
                 <div>
                   <label className="block text-xs font-semibold text-[#AEB7C2] uppercase tracking-wider mb-2">
                     Business Email
@@ -165,51 +182,69 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {/* Phone Number (optional) */}
+                <div>
+                  <label className="block text-xs font-semibold text-[#AEB7C2] uppercase tracking-wider mb-2">
+                    Phone Number{" "}
+                    <span className="text-[#AEB7C2]/40 normal-case font-normal">(optional)</span>
+                  </label>
+                  <input
+                    type="tel"
+                    placeholder="(555) 867-5309"
+                    className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#6FAFA6]/60 transition-colors"
+                  />
+                </div>
+
+                {/* Industry */}
                 <div>
                   <label className="block text-xs font-semibold text-[#AEB7C2] uppercase tracking-wider mb-2">
                     Industry
                   </label>
                   <select className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm focus:outline-none focus:border-[#6FAFA6]/60 transition-colors appearance-none">
-                    <option value="" className="text-[#AEB7C2]/50">Select your industry</option>
+                    <option value="">Select your industry</option>
                     {industries.map((ind) => (
                       <option key={ind} value={ind}>{ind}</option>
                     ))}
                   </select>
                 </div>
 
+                {/* What do you need help with most? */}
                 <div>
                   <label className="block text-xs font-semibold text-[#AEB7C2] uppercase tracking-wider mb-2">
-                    Primary Challenge
+                    What do you need help with most?
                   </label>
                   <select className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm focus:outline-none focus:border-[#6FAFA6]/60 transition-colors appearance-none">
-                    <option value="">What's slowing you down most?</option>
+                    <option value="">Select one</option>
                     {challenges.map((c) => (
                       <option key={c} value={c}>{c}</option>
                     ))}
                   </select>
                 </div>
 
+                {/* Tell Us More (optional) */}
                 <div>
                   <label className="block text-xs font-semibold text-[#AEB7C2] uppercase tracking-wider mb-2">
-                    Additional Context <span className="text-[#AEB7C2]/40 normal-case font-normal">(optional)</span>
+                    Tell Us More{" "}
+                    <span className="text-[#AEB7C2]/40 normal-case font-normal">(optional)</span>
                   </label>
                   <textarea
                     rows={4}
-                    placeholder="Anything else we should know before the assessment — size of team, current tools, timeline pressures..."
+                    placeholder="What's not working today? Share your website issues, manual tasks, tools you use, or goals for the next 30–90 days."
                     className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#6FAFA6]/60 transition-colors resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-semibold py-4 rounded-lg transition-colors text-sm"
+                  className="w-full bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-bold py-4 rounded-lg transition-colors text-sm tracking-wide"
                 >
-                  Request Free Assessment
+                  Request My Free Assessment
                 </button>
 
                 <p className="text-[#AEB7C2]/40 text-xs text-center">
                   No commitment required. We will follow up within one business day.
                 </p>
+
               </form>
             </div>
           </div>

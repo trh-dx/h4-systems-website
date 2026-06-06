@@ -1,35 +1,31 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const assessmentCovers = [
+const assessmentSteps = [
   {
-    title: "Current-State Systems Review",
-    desc: "We map the tools, workflows, and processes your business currently relies on — including the gaps and bottlenecks.",
+    title: "We review your website",
+    desc: "We look at your design, mobile experience, messaging, and lead capture.",
   },
   {
-    title: "Automation Opportunity Analysis",
-    desc: "We identify the highest-leverage manual processes that can be systematized to save time and reduce errors.",
+    title: "We identify the biggest gaps",
+    desc: "We point out what may be costing you leads, trust, or follow-up opportunities.",
   },
   {
-    title: "Website & Lead Capture Evaluation",
-    desc: "We assess whether your website is actively working as a lead-generation asset or functioning as a passive brochure.",
+    title: "We prioritize improvements",
+    desc: "You get a clear list of what to fix first, without unnecessary complexity.",
   },
   {
-    title: "Systems Integration Assessment",
-    desc: "We identify disconnected tools and map the integration opportunities that would unify your operational data.",
-  },
-  {
-    title: "Modernization Priority Roadmap",
-    desc: "You receive a prioritized, practical roadmap — not a 200-page report. Actionable next steps sequenced by impact.",
+    title: "We walk through next steps",
+    desc: "We review the findings with you on a short video call.",
   },
 ];
 
-const whatYouGet = [
-  "Review of your current website and online first impression",
-  "Feedback on mobile layout, messaging, lead capture, and trust signals",
-  "Plain-English summary of what's working and what needs improvement",
-  "Prioritized list of recommended updates",
-  "No obligation — no sales pressure",
+const goodFitFor = [
+  "Replace an outdated or hard-to-manage website",
+  "Make your site easier to use on mobile",
+  "Capture more leads from visitors already finding you",
+  "Improve follow-up after someone contacts you",
+  "Understand what to fix first before spending money",
 ];
 
 const industries = [
@@ -79,11 +75,11 @@ export default function ContactPage() {
 
             {/* Left: Assessment detail */}
             <div className="space-y-8">
-              {/* What the assessment covers */}
+              {/* How the assessment works */}
               <div className="bg-[#1A2333] border border-[#AEB7C2]/15 rounded-xl p-8">
-                <div className="text-xs font-semibold tracking-widest uppercase text-[#AEB7C2]/60 mb-6">What the Assessment Covers</div>
+                <div className="text-xs font-semibold tracking-widest uppercase text-[#AEB7C2]/60 mb-6">How the Assessment Works</div>
                 <div className="space-y-5">
-                  {assessmentCovers.map((item, i) => (
+                  {assessmentSteps.map((item, i) => (
                     <div key={item.title} className="flex gap-4">
                       <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#6FAFA6]/15 border border-[#6FAFA6]/30 flex items-center justify-center mt-0.5">
                         <span className="text-[#6FAFA6] text-xs font-bold">{i + 1}</span>
@@ -97,11 +93,11 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* What you receive */}
+              {/* Good fit if you want to */}
               <div className="bg-[#0B1220] border border-[#6FAFA6]/20 rounded-xl p-8">
-                <div className="text-xs font-semibold tracking-widest uppercase text-[#6FAFA6] mb-5">What&apos;s Included</div>
+                <div className="text-xs font-semibold tracking-widest uppercase text-[#6FAFA6] mb-5">Good Fit If You Want To</div>
                 <ul className="space-y-3">
-                  {whatYouGet.map((item) => (
+                  {goodFitFor.map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm text-[#AEB7C2]">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#6FAFA6] flex-shrink-0 mt-[5px]" />
                       {item}
@@ -238,7 +234,7 @@ export default function ContactPage() {
                   type="submit"
                   className="w-full bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-bold py-4 rounded-lg transition-colors text-sm tracking-wide"
                 >
-                  Request My Free Assessment
+                  Request Free Assessment
                 </button>
 
                 <p className="text-[#AEB7C2]/40 text-xs text-center">

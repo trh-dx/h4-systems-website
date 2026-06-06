@@ -57,7 +57,7 @@ export default function Navbar() {
             href="/contact"
             className="hidden lg:inline-flex items-center font-mono bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-bold text-[13px] tracking-[0.18em] px-6 py-3 rounded-md transition-colors duration-200"
           >
-            LET&apos;S TALK
+            GET FREE ASSESSMENT
           </a>
 
           {/* Mobile toggle */}
@@ -104,7 +104,7 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
                 className="mt-4 inline-flex items-center justify-center font-mono bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-bold text-[10px] tracking-[0.18em] px-6 py-3.5 rounded-md transition-colors"
               >
-                LET&apos;S TALK
+                GET FREE ASSESSMENT
               </a>
             </div>
           </motion.div>

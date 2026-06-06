@@ -861,7 +861,7 @@ export default function CaseStudiesPage() {
                              text-[13px] tracking-[0.16em] uppercase px-8 py-4 rounded-md
                              transition-colors duration-200"
                 >
-                  Request a Free Website &amp; Workflow Audit
+                  Request Free Assessment
                   <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
                 </a>
               </div>

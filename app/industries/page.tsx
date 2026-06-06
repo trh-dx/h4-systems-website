@@ -236,7 +236,7 @@ export default function IndustriesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/contact" className="inline-block bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-semibold px-8 py-4 rounded-lg transition-colors">
-              Schedule a Free Assessment
+              Request Free Assessment
             </a>
             <a href="/case-studies" className="inline-block border border-[#6FAFA6] hover:bg-[#6FAFA6]/10 text-[#6FAFA6] font-semibold px-8 py-4 rounded-lg transition-colors">
               View Case Studies

@@ -267,12 +267,11 @@ export default function AboutPage() {
             Work With Us
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#F4F7F9] leading-tight tracking-tight mb-5">
-            Let&apos;s assess your modernization opportunity.
+            Ready to see what could be better?
           </h2>
           <p className="text-[#AEB7C2] leading-relaxed mb-10 max-w-xl mx-auto">
-            Every engagement starts with a free assessment. No obligation, no sales pitch —
-            just a structured conversation about where your operations are today and where
-            they could be.
+            Start with a free website and workflow review. No commitment, no sales pitch —
+            just a clear look at what is working, what is not, and what is worth improving first.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -282,7 +281,7 @@ export default function AboutPage() {
                          text-[13px] tracking-[0.16em] uppercase px-8 py-4 rounded-md
                          transition-colors duration-200"
             >
-              Schedule a Free Assessment
+              Request Free Assessment
               <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
             </a>
             <a

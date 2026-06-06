@@ -102,7 +102,7 @@ export default function CredibilityBand() {
                            text-[#0B1220] font-bold text-[12px] tracking-[0.18em] uppercase
                            px-8 py-4 rounded-md transition-colors duration-200 mt-2"
               >
-                Let&apos;s Build Something Great
+                Request Free Assessment
                 <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
               </a>
             </motion.div>

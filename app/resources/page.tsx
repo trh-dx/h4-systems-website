@@ -363,7 +363,7 @@ export default function ResourcesPage() {
                          text-[13px] tracking-[0.16em] uppercase px-8 py-4 rounded-md
                          transition-colors duration-200"
             >
-              Schedule a Free Assessment
+              Request Free Assessment
               <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
             </a>
             <a

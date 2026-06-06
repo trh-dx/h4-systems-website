@@ -296,7 +296,7 @@ export default function ServicesPage() {
                          text-[#0B1220] font-bold text-[13px] tracking-[0.16em] uppercase px-8 py-4 rounded-md
                          transition-colors duration-200"
             >
-              Let&apos;s Talk
+              Request Free Assessment
               <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
             </a>
             <a
@@ -507,7 +507,7 @@ export default function ServicesPage() {
                            hover:bg-[#83BDB5] text-[#0B1220] font-bold text-[13px] tracking-[0.18em]
                            uppercase px-10 py-4 rounded-md transition-colors duration-200"
               >
-                Let&apos;s Talk
+                Request Free Assessment
                 <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
               </a>
             </div>

@@ -102,8 +102,8 @@ export default function ContactPage() {
                 <div className="text-xs font-semibold tracking-widest uppercase text-[#6FAFA6] mb-5">What&apos;s Included</div>
                 <ul className="space-y-3">
                   {whatYouGet.map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-sm text-[#AEB7C2]">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6FAFA6] flex-shrink-0" />
+                    <li key={item} className="flex items-start gap-3 text-sm text-[#AEB7C2]">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#6FAFA6] flex-shrink-0 mt-[5px]" />
                       {item}
                     </li>
                   ))}

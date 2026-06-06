@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -50,6 +54,50 @@ const challenges = [
 ];
 
 export default function ContactPage() {
+  const [submitting, setSubmitting] = useState(false);
+  const [status, setStatus] = useState<"success" | "error" | null>(null);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSubmitting(true);
+    setStatus(null);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const turnstileToken = formData.get("cf-turnstile-response") as string;
+
+    if (!turnstileToken) {
+      setStatus("error");
+      setSubmitting(false);
+      return;
+    }
+
+    formData.delete("cf-turnstile-response");
+    const fields = Object.fromEntries(formData);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...fields, turnstileToken }),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        form.reset();
+        (window as any).turnstile?.reset();
+      } else {
+        setStatus("error");
+        (window as any).turnstile?.reset();
+      }
+    } catch {
+      setStatus("error");
+      (window as any).turnstile?.reset();
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
   return (
     <div className="min-h-screen bg-[#0B1220] text-[#F4F7F9]">
 
@@ -116,7 +164,7 @@ export default function ContactPage() {
               <div className="text-[#F4F7F9] font-bold text-xl mb-2">Your Information</div>
               <p className="text-[#AEB7C2] text-sm mb-8">No commitment required. We&apos;ll follow up within one business day.</p>
 
-              <form className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-5">
 
                 {/* First + Last name — side by side on desktop */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -126,7 +174,9 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="text"
+                      name="firstName"
                       placeholder="Jane"
+                      required
                       className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#6FAFA6]/60 transition-colors"
                     />
                   </div>
@@ -136,7 +186,9 @@ export default function ContactPage() {
                     </label>
                     <input
                       type="text"
+                      name="lastName"
                       placeholder="Smith"
+                      required
                       className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#6FAFA6]/60 transition-colors"
                     />
                   </div>
@@ -149,7 +201,9 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="text"
+                    name="companyName"
                     placeholder="Acme Services LLC"
+                    required
                     className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#6FAFA6]/60 transition-colors"
                   />
                 </div>
@@ -161,7 +215,9 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="url"
+                    name="websiteUrl"
                     placeholder="https://yourcompany.com"
+                    required
                     className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#6FAFA6]/60 transition-colors"
                   />
                 </div>
@@ -173,7 +229,9 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="email"
+                    name="businessEmail"
                     placeholder="jane@yourcompany.com"
+                    required
                     className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#6FAFA6]/60 transition-colors"
                   />
                 </div>
@@ -186,6 +244,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="tel"
+                    name="phoneNumber"
                     placeholder="(555) 867-5309"
                     className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#6FAFA6]/60 transition-colors"
                   />
@@ -196,7 +255,11 @@ export default function ContactPage() {
                   <label className="block text-xs font-semibold text-[#AEB7C2] uppercase tracking-wider mb-2">
                     Industry
                   </label>
-                  <select className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm focus:outline-none focus:border-[#6FAFA6]/60 transition-colors appearance-none">
+                  <select
+                    name="industry"
+                    required
+                    className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm focus:outline-none focus:border-[#6FAFA6]/60 transition-colors appearance-none"
+                  >
                     <option value="">Select your industry</option>
                     {industries.map((ind) => (
                       <option key={ind} value={ind}>{ind}</option>
@@ -209,7 +272,11 @@ export default function ContactPage() {
                   <label className="block text-xs font-semibold text-[#AEB7C2] uppercase tracking-wider mb-2">
                     What do you need help with most?
                   </label>
-                  <select className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm focus:outline-none focus:border-[#6FAFA6]/60 transition-colors appearance-none">
+                  <select
+                    name="needHelpWith"
+                    required
+                    className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm focus:outline-none focus:border-[#6FAFA6]/60 transition-colors appearance-none"
+                  >
                     <option value="">Select one</option>
                     {challenges.map((c) => (
                       <option key={c} value={c}>{c}</option>
@@ -224,17 +291,38 @@ export default function ContactPage() {
                     <span className="text-[#AEB7C2]/40 normal-case font-normal">(optional)</span>
                   </label>
                   <textarea
+                    name="tellUsMore"
                     rows={4}
                     placeholder="What's not working today? Share your website issues, manual tasks, tools you use, or goals for the next 30–90 days."
                     className="w-full bg-[#0B1220] border border-[#AEB7C2]/20 rounded-lg px-4 py-3 text-[#F4F7F9] text-sm placeholder-[#AEB7C2]/30 focus:outline-none focus:border-[#6FAFA6]/60 transition-colors resize-none"
                   />
                 </div>
 
+                {/* Turnstile widget */}
+                <div
+                  className="cf-turnstile"
+                  data-sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+                  data-theme="dark"
+                />
+
+                {/* Status messages */}
+                {status === "success" && (
+                  <div className="rounded-lg bg-[#6FAFA6]/10 border border-[#6FAFA6]/30 px-4 py-3 text-[#6FAFA6] text-sm font-medium">
+                    Thank you! We received your request and will follow up within one business day.
+                  </div>
+                )}
+                {status === "error" && (
+                  <div className="rounded-lg bg-red-900/20 border border-red-500/30 px-4 py-3 text-red-400 text-sm font-medium">
+                    Something went wrong. Please try again or email us at contact@hfoursystems.com.
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-bold py-4 rounded-lg transition-colors text-sm tracking-wide"
+                  disabled={submitting}
+                  className="w-full bg-[#6FAFA6] hover:bg-[#83BDB5] disabled:opacity-60 disabled:cursor-not-allowed text-[#0B1220] font-bold py-4 rounded-lg transition-colors text-sm tracking-wide"
                 >
-                  Request Free Assessment
+                  {submitting ? "Sending…" : "Request Free Assessment"}
                 </button>
 
                 <p className="text-[#AEB7C2]/40 text-xs text-center">
@@ -257,6 +345,11 @@ export default function ContactPage() {
       </section>
 
       <Footer />
+
+      <Script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+        strategy="afterInteractive"
+      />
 
     </div>
   );

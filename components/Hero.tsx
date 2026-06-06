@@ -112,7 +112,7 @@ export default function Hero() {
               className="group inline-flex items-center justify-center gap-3 font-mono
                          bg-[#6FAFA6] hover:bg-[#83BDB5] text-[#0B1220] font-bold
                          text-[13px] tracking-[0.16em] uppercase px-8 py-4 rounded-md
-                         transition-colors duration-200"
+                         whitespace-nowrap transition-colors duration-200"
             >
               Request Free Assessment
               <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>

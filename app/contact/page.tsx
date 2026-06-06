@@ -25,10 +25,10 @@ const assessmentCovers = [
 ];
 
 const whatYouGet = [
-  "90-minute structured assessment session",
-  "Written operational findings summary",
-  "Prioritized modernization opportunity list",
-  "Recommended next steps with rough scope",
+  "Review of your current website and online first impression",
+  "Feedback on mobile layout, messaging, lead capture, and trust signals",
+  "Plain-English summary of what's working and what needs improvement",
+  "Prioritized list of recommended updates",
   "No obligation — no sales pressure",
 ];
 
@@ -99,7 +99,7 @@ export default function ContactPage() {
 
               {/* What you receive */}
               <div className="bg-[#0B1220] border border-[#6FAFA6]/20 rounded-xl p-8">
-                <div className="text-xs font-semibold tracking-widest uppercase text-[#6FAFA6] mb-5">What You Receive</div>
+                <div className="text-xs font-semibold tracking-widest uppercase text-[#6FAFA6] mb-5">What&apos;s Included</div>
                 <ul className="space-y-3">
                   {whatYouGet.map((item) => (
                     <li key={item} className="flex items-center gap-3 text-sm text-[#AEB7C2]">
@@ -110,7 +110,7 @@ export default function ContactPage() {
                 </ul>
                 <div className="mt-6 pt-5 border-t border-[#6FAFA6]/15">
                   <div className="text-xs text-[#AEB7C2]/50 uppercase tracking-wider mb-0.5">Format</div>
-                  <div className="text-[#F4F7F9] text-sm font-medium">Video call — 60 to 90 minutes</div>
+                  <div className="text-[#F4F7F9] text-sm font-medium">Video call — 30 to 45 minutes</div>
                 </div>
               </div>
             </div>

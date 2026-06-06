@@ -86,7 +86,7 @@ export default function Hero() {
             variants={fadeUp}
             className="text-[#AEB7C2] text-[15px] leading-[1.75] max-w-[520px] mb-7"
           >
-            H4 Systems helps businesses build new and replace outdated websites
+            H4 Systems helps North Texas businesses build new and replace outdated websites
             and manual processes with clean, mobile-friendly websites, simple
             automations, and practical dashboards that help you capture leads,
             follow up faster, and see what&apos;s happening in your business.

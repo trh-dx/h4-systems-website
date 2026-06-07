@@ -16,7 +16,7 @@ Built with Next.js (App Router), Tailwind CSS v4, and Framer Motion.
 | `/process` | 4-phase process (Review, Prioritize, Build & Connect, Support & Improve), "You do not have to fix everything at once" section, CTA |
 | `/case-studies` | Our Work — 4 scenario-based example cards (website, lead capture, workflow, reporting) with visual before/after comparisons |
 | `/resources` | SMB Operations Assessment Checklist — email capture, document preview, 4-section checklist, "Coming Next" teasers |
-| `/contact` | Free Website Assessment — how it works, good-fit card, contact form |
+| `/contact` | Free Website Assessment — how it works, good-fit card, contact form (submits to Google Sheets via Apps Script; Cloudflare Turnstile spam protection) |
 | `/industries` | 6 industry cards (not in main nav) |
 
 ---
@@ -134,6 +134,8 @@ app/
   process/page.tsx      — Our Process page
   resources/page.tsx    — Resources / SMB Checklist page
   layout.tsx
+  api/
+    contact/route.ts    — POST handler: verifies Turnstile token, forwards form data to Google Apps Script
 
 components/
   Navbar.tsx
@@ -158,6 +160,17 @@ _versions/
   v4-2026-05-23/         — Snapshot before case studies page reframe
   v5-2026-06-05/         — Snapshot before homepage hero copy rewrite
 ```
+
+---
+
+## Environment Variables
+
+| Variable | Where used | Description |
+|---|---|---|
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | Client (`app/contact/page.tsx`) | Cloudflare Turnstile site key — rendered in the widget |
+| `TURNSTILE_SECRET_KEY` | Server (`app/api/contact/route.ts`) | Cloudflare Turnstile secret key — used to verify tokens server-side |
+
+Create a `.env.local` file in the project root with both values. Neither variable should be committed to version control.
 
 ---
 
